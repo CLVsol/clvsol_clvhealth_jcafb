@@ -451,6 +451,13 @@ def install():
     ]
     install_update_module('clv_base', update, group_names)
 
+    group_names = [
+        'User (Global Tag)',
+        'Manager (Global Tag)',
+        'Super Manager (Global Tag)',
+    ]
+    install_update_module('clv_global_tag', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons
