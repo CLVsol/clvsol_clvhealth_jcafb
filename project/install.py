@@ -437,6 +437,9 @@ def install():
     #
     # ################################################################################################################
 
+    group_names = []
+    install_update_module('clv_disable_web_access', update, group_names)
+
     group_names = [
         'User (Base)',
         'Super User (Base)',
