@@ -437,6 +437,17 @@ def install():
     #
     # ################################################################################################################
 
+    group_names = [
+        'User (Base)',
+        'Super User (Base)',
+        'Annotation User (Base)',
+        'Register User (Base)',
+        'Log User (Base)',
+        'Manager (Base)',
+        'Super Manager (Base)',
+    ]
+    install_update_module('clv_base', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons
