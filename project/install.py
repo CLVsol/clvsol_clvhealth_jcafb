@@ -466,6 +466,14 @@ def install():
     install_update_module('clv_address', update, group_names)
 
     group_names = [
+        'User (Document)',
+        'Manager (Document)',
+        'Super Manager (Document)',
+        'Approver (Document)',
+    ]
+    install_update_module('clv_document', update, group_names)
+
+    group_names = [
         'User (Person)',
         'Manager (Person)',
         'Super Manager (Person)',
