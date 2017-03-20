@@ -437,6 +437,30 @@ def install():
     #
     # ################################################################################################################
 
+    group_names = []
+    install_update_module('mail', update, group_names)
+
+    group_names = []
+    install_update_module('hr', update, group_names)
+
+    group_names = []
+    install_update_module('sales_team', update, group_names)
+
+    # ################################################################################################################
+    #
+    # OCA/l10n-brazil
+    #
+    # ################################################################################################################
+
+    group_names = []
+    install_update_module('l10n_br_base', update, group_names)
+
+    group_names = []
+    install_update_module('l10n_br_zip', update, group_names)
+
+    group_names = []
+    install_update_module('l10n_br_zip_correios', update, group_names)
+
     # ################################################################################################################
     #
     # OCA/server-tools
@@ -494,6 +518,33 @@ def install():
         'Super Manager (Person)',
     ]
     install_update_module('clv_person', update, group_names)
+
+    # ################################################################################################################
+    #
+    # CLVsol Odoo Addons - Brazilian Localization
+    #
+    # ################################################################################################################
+
+    group_names = []
+    install_update_module('clv_l10n_br_base', update, group_names)
+
+    # ################################################################################################################
+    #
+    # CLVsol Odoo Addons - JCAFB customizations
+    #
+    # ################################################################################################################
+
+    group_names = []
+    install_update_module('clv_base_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_address_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_document_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_person_jcafb', update, group_names)
 
 
 def secondsToStr(t):
