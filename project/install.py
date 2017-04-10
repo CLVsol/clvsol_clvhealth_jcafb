@@ -519,6 +519,13 @@ def install():
     ]
     install_update_module('clv_person', update, group_names)
 
+    group_names = [
+        'User (Community)',
+        'Manager (Community)',
+        'Super Manager (Community)',
+    ]
+    install_update_module('clv_community', update, group_names)
+
     group_names = []
     install_update_module('clv_person_address_history', update, group_names)
 
