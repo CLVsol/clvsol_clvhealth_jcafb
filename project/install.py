@@ -529,6 +529,9 @@ def install():
     group_names = []
     install_update_module('clv_person_address_history', update, group_names)
 
+    group_names = []
+    install_update_module('clv_employee', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
