@@ -446,6 +446,9 @@ def install():
     group_names = []
     install_update_module('sales_team', update, group_names)
 
+    group_names = []
+    install_update_module('survey', update, group_names)
+
     # ################################################################################################################
     #
     # OCA/l10n-brazil
@@ -539,6 +542,13 @@ def install():
     group_names = []
     install_update_module('clv_employee', update, group_names)
 
+    group_names = [
+        'User (Survey)',
+        'Manager (Survey)',
+        'Super Manager (Survey)',
+    ]
+    install_update_module('clv_survey', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
@@ -568,6 +578,33 @@ def install():
 
     group_names = []
     install_update_module('clv_person_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_TCP17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_TCR17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_TID17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QAN17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QDH17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QMD17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QSC17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QSF17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_survey_QSI17', update, group_names)
 
 
 def secondsToStr(t):
