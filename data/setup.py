@@ -130,6 +130,22 @@ if __name__ == '__main__':
     conn_string = "dbname='" + dbname + "' user='" + db_user + "' host='" + db_server + \
                   "' password='" + db_password + "'"
 
+    res_partner_args = []
+    db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    table_name = 'res_partner'
+    print('-->', client, res_partner_args, db_path, table_name)
+    print('--> Executing res_partner_export_sqlite()...')
+    print()
+    res_partner_export_sqlite(client, res_partner_args, db_path, table_name)
+
+    res_users_args = []
+    db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name, conn_string)
+    print('--> Executing res_users_export_sqlite()...')
+    print()
+    res_users_export_sqlite(client, res_users_args, db_path, table_name, conn_string)
+
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
     print()
