@@ -28,6 +28,44 @@ import erppeek
 from odoo_api import *
 
 
+def jcafb_2017_export_sqlite(client, db_path, conn_string):
+
+    res_partner_args = []
+    table_name = 'res_partner'
+    print('-->', client, res_partner_args, db_path, table_name)
+    print('--> Executing res_partner_export_sqlite()...')
+    print()
+    res_partner_export_sqlite(client, res_partner_args, db_path, table_name)
+
+    res_users_args = []
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name, conn_string)
+    print('--> Executing res_users_export_sqlite()...')
+    print()
+    res_users_export_sqlite(client, res_users_args, db_path, table_name, conn_string)
+
+    hr_department_args = []
+    table_name = 'hr_department'
+    print('-->', client, hr_department_args, db_path, table_name)
+    print('--> Executing hr_department_export_sqlite()...')
+    print()
+    hr_department_export_sqlite(client, hr_department_args, db_path, table_name)
+
+    hr_job_args = []
+    table_name = 'hr_job'
+    print('-->', client, hr_job_args, db_path, table_name)
+    print('--> Executing hr_job_export_sqlite()...')
+    print()
+    hr_job_export_sqlite(client, hr_job_args, db_path, table_name)
+
+    hr_employee_args = []
+    table_name = 'hr_employee'
+    print('-->', client, hr_employee_args, db_path, table_name)
+    print('--> Executing hr_employee_export_sqlite()...')
+    print()
+    hr_employee_export_sqlite(client, hr_employee_args, db_path, table_name)
+
+
 def get_arguments():
 
     global server
@@ -130,21 +168,12 @@ if __name__ == '__main__':
     conn_string = "dbname='" + dbname + "' user='" + db_user + "' host='" + db_server + \
                   "' password='" + db_password + "'"
 
-    res_partner_args = []
-    db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    table_name = 'res_partner'
-    print('-->', client, res_partner_args, db_path, table_name)
-    print('--> Executing res_partner_export_sqlite()...')
-    print()
-    res_partner_export_sqlite(client, res_partner_args, db_path, table_name)
-
-    res_users_args = []
-    db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    table_name = 'res_users'
-    print('-->', client, res_users_args, db_path, table_name, conn_string)
-    print('--> Executing res_users_export_sqlite()...')
-    print()
-    res_users_export_sqlite(client, res_users_args, db_path, table_name, conn_string)
+    # # ***** clvhealth-jcafb-2017-pro
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_export_sqlite()...')
+    # jcafb_2017_export_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
