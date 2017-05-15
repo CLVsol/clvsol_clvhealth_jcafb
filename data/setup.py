@@ -66,6 +66,55 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     hr_employee_export_sqlite(client, hr_employee_args, db_path, table_name)
 
 
+def jcafb_2017_import_sqlite(client, db_path, conn_string):
+
+    res_partner_args = []
+    table_name = 'res_partner'
+    print('-->', client, res_partner_args, db_path, table_name)
+    print('--> Executing res_partner_import_sqlite()...')
+    print()
+    res_partner_import_sqlite(client, res_partner_args, db_path, table_name)
+
+    res_users_args = []
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name)
+    print('--> Executing res_users_import_sqlite()...')
+    print()
+    res_users_import_sqlite(client, res_users_args, db_path, table_name)
+
+    hr_department_args = []
+    table_name = 'hr_department'
+    print('-->', client, hr_department_args, db_path, table_name)
+    print('--> Executing hr_department_import_sqlite()...')
+    print()
+    hr_department_import_sqlite(client, hr_department_args, db_path, table_name)
+
+    hr_job_args = []
+    table_name = 'hr_job'
+    print('-->', client, hr_job_args, db_path, table_name)
+    print('--> Executing hr_job_import_sqlite()...')
+    print()
+    hr_job_import_sqlite(client, hr_job_args, db_path, table_name)
+
+    hr_employee_args = []
+    table_name = 'hr_employee'
+    hr_department_table_name = 'hr_department'
+    hr_job_table_name = 'hr_job'
+    res_partner_table_name = 'res_partner'
+    res_users_table_name = 'res_users'
+    print(
+        '-->',
+        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+        res_partner_table_name, res_users_table_name
+    )
+    print('--> Executing hr_employee_import_sqlite()...')
+    print()
+    hr_employee_import_sqlite(
+        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+        res_partner_table_name, res_users_table_name
+    )
+
+
 def get_arguments():
 
     global server
@@ -172,8 +221,15 @@ if __name__ == '__main__':
     # #
     # db_path = 'data/clvhealth_jcafb_2017.sqlite'
     # print('-->', client, db_path, conn_string)
-    # print('--> Executing jcafb_export_sqlite()...')
+    # print('--> Executing jcafb_2017_export_sqlite()...')
     # jcafb_2017_export_sqlite(client, db_path, conn_string)
+
+    # ***** tkl-odoo10-vm
+    #
+    db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    print('-->', client, db_path, conn_string)
+    print('--> Executing jcafb_2017_import_sqlite()...')
+    jcafb_2017_import_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
