@@ -224,12 +224,12 @@ if __name__ == '__main__':
     # print('--> Executing jcafb_2017_export_sqlite()...')
     # jcafb_2017_export_sqlite(client, db_path, conn_string)
 
-    # ***** tkl-odoo10-vm
-    #
-    db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    print('-->', client, db_path, conn_string)
-    print('--> Executing jcafb_2017_import_sqlite()...')
-    jcafb_2017_import_sqlite(client, db_path, conn_string)
+    # # ***** tkl-odoo10-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2017_import_sqlite()...')
+    # jcafb_2017_import_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
