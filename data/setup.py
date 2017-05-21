@@ -163,6 +163,75 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         res_partner_table_name, res_users_table_name
     )
 
+    global_tag_args = []
+    table_name = 'clv_global_tag'
+    print('-->', client, global_tag_args, db_path, table_name)
+    print('--> Executing clv_global_tag_import_sqlite()...')
+    print()
+    clv_global_tag_import_sqlite(client, global_tag_args, db_path, table_name)
+
+    address_category_args = []
+    table_name = 'clv_address_category'
+    print('-->', client, address_category_args, db_path, table_name)
+    print('--> Executing clv_address_category_import_sqlite()...')
+    print()
+    clv_address_category_import_sqlite(client, address_category_args, db_path, table_name)
+
+    address_args = []
+    table_name = 'clv_address'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_address_category'
+    print('-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name)
+    print('--> Executing clv_address_import_sqlite()...')
+    print()
+    clv_address_import_sqlite(client, address_args, db_path, table_name, global_tag_table_name, category_table_name)
+
+    person_category_args = []
+    table_name = 'clv_person_category'
+    print('-->', client, person_category_args, db_path, table_name)
+    print('--> Executing clv_person_category_import_sqlite()...')
+    print()
+    clv_person_category_import_sqlite(client, person_category_args, db_path, table_name)
+
+    person_address_role_args = []
+    table_name = 'clv_person_address_role'
+    print('-->', client, person_address_role_args, db_path, table_name)
+    print('--> Executing clv_person_address_role_import_sqlite()...')
+    print()
+    clv_person_address_role_import_sqlite(client, person_address_role_args, db_path, table_name)
+
+    person_args = []
+    table_name = 'clv_person'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_person_category'
+    address_table_name = 'clv_address'
+    print(
+        '-->',
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+    )
+    print('--> Executing clv_person_import_sqlite()...')
+    print()
+    clv_person_import_sqlite(
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+    )
+
+    person_address_history_args = []
+    table_name = 'clv_person_address'
+    global_tag_table_name = 'clv_global_tag'
+    role_table_name = 'clv_person_address_role'
+    person_table_name = 'clv_person'
+    address_table_name = 'clv_address'
+    print(
+        '-->', client, person_address_history_args, db_path, table_name, global_tag_table_name,
+        role_table_name, person_table_name, address_table_name
+    )
+    print('--> Executing clv_person_address_history_import_sqlite()...')
+    print()
+    clv_person_address_history_import_sqlite(
+        client, person_address_history_args, db_path, table_name, global_tag_table_name,
+        role_table_name, person_table_name, address_table_name
+    )
+
 
 def get_arguments():
 
@@ -266,12 +335,12 @@ if __name__ == '__main__':
     conn_string = "dbname='" + dbname + "' user='" + db_user + "' host='" + db_server + \
                   "' password='" + db_password + "'"
 
-    # ***** clvhealth-jcafb-2017-pro
-    #
-    db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    print('-->', client, db_path, conn_string)
-    print('--> Executing jcafb_2017_export_sqlite()...')
-    jcafb_2017_export_sqlite(client, db_path, conn_string)
+    # # ***** clvhealth-jcafb-2017-pro
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2017_export_sqlite()...')
+    # jcafb_2017_export_sqlite(client, db_path, conn_string)
 
     # # ***** tkl-odoo10-vm
     # #
