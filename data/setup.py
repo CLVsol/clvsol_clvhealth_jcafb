@@ -214,6 +214,16 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     # print()
     # clv_address_import_sqlite(client, address_args, db_path, table_name, global_tag_table_name, category_table_name)
 
+    address_log_args = []
+    table_name = 'clv_address_log'
+    address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
+    print('--> Executing clv_address_log_import_sqlite()...')
+    print()
+    clv_address_log_import_sqlite(client, address_log_args, db_path, table_name,
+                                  address_table_name, res_users_table_name)
+
     # person_category_args = []
     # table_name = 'clv_person_category'
     # print('-->', client, person_category_args, db_path, table_name)
