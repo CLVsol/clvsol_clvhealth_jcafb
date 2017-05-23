@@ -86,6 +86,13 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print()
     myo_address_export_sqlite(client, address_args, db_path, table_name)
 
+    address_log_args = []
+    table_name = 'clv_address_log'
+    print('-->', client, address_log_args, db_path, table_name)
+    print('--> Executing myo_address_log_export_sqlite()...')
+    print()
+    myo_address_log_export_sqlite(client, address_log_args, db_path, table_name)
+
     person_category_args = []
     table_name = 'clv_person_category'
     print('-->', client, person_category_args, db_path, table_name)
@@ -100,6 +107,13 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print()
     myo_person_export_sqlite(client, person_args, db_path, table_name)
 
+    person_log_args = []
+    table_name = 'clv_person_log'
+    print('-->', client, person_log_args, db_path, table_name)
+    print('--> Executing myo_person_log_export_sqlite()...')
+    print()
+    myo_person_log_export_sqlite(client, person_log_args, db_path, table_name)
+
     person_address_role_args = []
     table_name = 'clv_person_address_role'
     print('-->', client, person_address_role_args, db_path, table_name)
@@ -113,6 +127,20 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print('--> Executing myo_person_address_export_sqlite()...')
     print()
     myo_person_address_export_sqlite(client, person_address_args, db_path, table_name)
+
+    person_address_log_args = []
+    table_name = 'clv_person_address_history_log'
+    print('-->', client, person_address_log_args, db_path, table_name)
+    print('--> Executing myo_person_address_log_export_sqlite()...')
+    print()
+    myo_person_address_log_export_sqlite(client, person_address_log_args, db_path, table_name)
+
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
+    print('--> Executing ir_sequence_export_sqlite()...')
+    print()
+    ir_sequence_export_sqlite(client, ir_sequence_args, db_path, table_name, conn_string)
 
 
 def jcafb_2017_import_sqlite(client, db_path, conn_string):
