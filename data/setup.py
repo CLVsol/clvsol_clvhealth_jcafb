@@ -253,15 +253,15 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     #     client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
     # )
 
-    person_log_args = []
-    table_name = 'clv_person_log'
-    person_table_name = 'clv_person'
-    res_users_table_name = 'res_users'
-    print('-->', client, person_log_args, db_path, table_name, person_table_name, res_users_table_name)
-    print('--> Executing clv_person_log_import_sqlite()...')
-    print()
-    clv_person_log_import_sqlite(client, person_log_args, db_path, table_name,
-                                 person_table_name, res_users_table_name)
+    # person_log_args = []
+    # table_name = 'clv_person_log'
+    # person_table_name = 'clv_person'
+    # res_users_table_name = 'res_users'
+    # print('-->', client, person_log_args, db_path, table_name, person_table_name, res_users_table_name)
+    # print('--> Executing clv_person_log_import_sqlite()...')
+    # print()
+    # clv_person_log_import_sqlite(client, person_log_args, db_path, table_name,
+    #                              person_table_name, res_users_table_name)
 
     # person_address_history_args = []
     # table_name = 'clv_person_address'
@@ -279,6 +279,17 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     #     client, person_address_history_args, db_path, table_name, global_tag_table_name,
     #     role_table_name, person_table_name, address_table_name
     # )
+
+    person_address_history_log_args = []
+    table_name = 'clv_person_address_history_log'
+    person_address_history_table_name = 'clv_person_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, person_address_history_log_args, db_path, table_name,
+          person_address_history_table_name, res_users_table_name)
+    print('--> Executing clv_person_address_history_log_import_sqlite()...')
+    print()
+    clv_person_address_history_log_import_sqlite(client, person_address_history_log_args, db_path, table_name,
+                                                 person_address_history_table_name, res_users_table_name)
 
 
 def get_arguments():
