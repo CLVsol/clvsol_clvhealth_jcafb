@@ -30,138 +30,138 @@ from odoo_api import *
 
 def jcafb_2017_export_sqlite(client, db_path, conn_string):
 
-    # res_partner_args = []
-    # table_name = 'res_partner'
-    # print('-->', client, res_partner_args, db_path, table_name)
-    # print('--> Executing res_partner_export_sqlite()...')
-    # print()
-    # res_partner_export_sqlite(client, res_partner_args, db_path, table_name)
+    res_partner_args = []
+    table_name = 'res_partner'
+    print('-->', client, res_partner_args, db_path, table_name)
+    print('--> Executing res_partner_export_sqlite()...')
+    print()
+    res_partner_export_sqlite(client, res_partner_args, db_path, table_name)
 
-    # res_users_args = []
-    # table_name = 'res_users'
-    # print('-->', client, res_users_args, db_path, table_name, conn_string)
-    # print('--> Executing res_users_export_sqlite()...')
-    # print()
-    # res_users_export_sqlite(client, res_users_args, db_path, table_name, conn_string)
+    res_users_args = []
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name, conn_string)
+    print('--> Executing res_users_export_sqlite()...')
+    print()
+    res_users_export_sqlite(client, res_users_args, db_path, table_name, conn_string)
 
-    # hr_department_args = []
-    # table_name = 'hr_department'
-    # print('-->', client, hr_department_args, db_path, table_name)
-    # print('--> Executing hr_department_export_sqlite()...')
-    # print()
-    # hr_department_export_sqlite(client, hr_department_args, db_path, table_name)
+    hr_department_args = []
+    table_name = 'hr_department'
+    print('-->', client, hr_department_args, db_path, table_name)
+    print('--> Executing hr_department_export_sqlite()...')
+    print()
+    hr_department_export_sqlite(client, hr_department_args, db_path, table_name)
 
-    # hr_job_args = []
-    # table_name = 'hr_job'
-    # print('-->', client, hr_job_args, db_path, table_name)
-    # print('--> Executing hr_job_export_sqlite()...')
-    # print()
-    # hr_job_export_sqlite(client, hr_job_args, db_path, table_name)
+    hr_job_args = []
+    table_name = 'hr_job'
+    print('-->', client, hr_job_args, db_path, table_name)
+    print('--> Executing hr_job_export_sqlite()...')
+    print()
+    hr_job_export_sqlite(client, hr_job_args, db_path, table_name)
 
-    # hr_employee_args = []
-    # table_name = 'hr_employee'
-    # print('-->', client, hr_employee_args, db_path, table_name)
-    # print('--> Executing hr_employee_export_sqlite()...')
-    # print()
-    # hr_employee_export_sqlite(client, hr_employee_args, db_path, table_name)
+    hr_employee_args = []
+    table_name = 'hr_employee'
+    print('-->', client, hr_employee_args, db_path, table_name)
+    print('--> Executing hr_employee_export_sqlite()...')
+    print()
+    hr_employee_export_sqlite(client, hr_employee_args, db_path, table_name)
 
-    # tag_args = []
-    # table_name = 'clv_global_tag'
-    # print('-->', client, tag_args, db_path, table_name)
-    # print('--> Executing myo_tag_export_sqlite()...')
-    # print()
-    # myo_tag_export_sqlite(client, tag_args, db_path, table_name)
+    tag_args = []
+    table_name = 'clv_global_tag'
+    print('-->', client, tag_args, db_path, table_name)
+    print('--> Executing myo_tag_export_sqlite()...')
+    print()
+    myo_tag_export_sqlite(client, tag_args, db_path, table_name)
 
-    # address_category_args = []
-    # table_name = 'clv_address_category'
-    # print('-->', client, address_category_args, db_path, table_name)
-    # print('--> Executing myo_address_category_export_sqlite()...')
-    # print()
-    # myo_address_category_export_sqlite(client, address_category_args, db_path, table_name)
+    address_category_args = []
+    table_name = 'clv_address_category'
+    print('-->', client, address_category_args, db_path, table_name)
+    print('--> Executing myo_address_category_export_sqlite()...')
+    print()
+    myo_address_category_export_sqlite(client, address_category_args, db_path, table_name)
 
-    # address_args = []
-    # table_name = 'clv_address'
-    # print('-->', client, address_args, db_path, table_name)
-    # print('--> Executing myo_address_export_sqlite()...')
-    # print()
-    # myo_address_export_sqlite(client, address_args, db_path, table_name)
+    address_args = []
+    table_name = 'clv_address'
+    print('-->', client, address_args, db_path, table_name)
+    print('--> Executing myo_address_export_sqlite()...')
+    print()
+    myo_address_export_sqlite(client, address_args, db_path, table_name)
 
-    # address_log_args = []
-    # table_name = 'clv_address_log'
-    # print('-->', client, address_log_args, db_path, table_name)
-    # print('--> Executing myo_address_log_export_sqlite()...')
-    # print()
-    # myo_address_log_export_sqlite(client, address_log_args, db_path, table_name)
+    address_log_args = []
+    table_name = 'clv_address_log'
+    print('-->', client, address_log_args, db_path, table_name)
+    print('--> Executing myo_address_log_export_sqlite()...')
+    print()
+    myo_address_log_export_sqlite(client, address_log_args, db_path, table_name)
 
-    # person_category_args = []
-    # table_name = 'clv_person_category'
-    # print('-->', client, person_category_args, db_path, table_name)
-    # print('--> Executing myo_person_category_export_sqlite()...')
-    # print()
-    # myo_person_category_export_sqlite(client, person_category_args, db_path, table_name)
+    person_category_args = []
+    table_name = 'clv_person_category'
+    print('-->', client, person_category_args, db_path, table_name)
+    print('--> Executing myo_person_category_export_sqlite()...')
+    print()
+    myo_person_category_export_sqlite(client, person_category_args, db_path, table_name)
 
-    # person_args = []
-    # table_name = 'clv_person'
-    # print('-->', client, person_args, db_path, table_name)
-    # print('--> Executing myo_person_export_sqlite()...')
-    # print()
-    # myo_person_export_sqlite(client, person_args, db_path, table_name)
+    person_args = []
+    table_name = 'clv_person'
+    print('-->', client, person_args, db_path, table_name)
+    print('--> Executing myo_person_export_sqlite()...')
+    print()
+    myo_person_export_sqlite(client, person_args, db_path, table_name)
 
-    # person_log_args = []
-    # table_name = 'clv_person_log'
-    # print('-->', client, person_log_args, db_path, table_name)
-    # print('--> Executing myo_person_log_export_sqlite()...')
-    # print()
-    # myo_person_log_export_sqlite(client, person_log_args, db_path, table_name)
+    person_log_args = []
+    table_name = 'clv_person_log'
+    print('-->', client, person_log_args, db_path, table_name)
+    print('--> Executing myo_person_log_export_sqlite()...')
+    print()
+    myo_person_log_export_sqlite(client, person_log_args, db_path, table_name)
 
-    # person_address_role_args = []
-    # table_name = 'clv_person_address_role'
-    # print('-->', client, person_address_role_args, db_path, table_name)
-    # print('--> Executing myo_person_address_role_export_sqlite()...')
-    # print()
-    # myo_person_address_role_export_sqlite(client, person_address_role_args, db_path, table_name)
+    person_address_role_args = []
+    table_name = 'clv_person_address_role'
+    print('-->', client, person_address_role_args, db_path, table_name)
+    print('--> Executing myo_person_address_role_export_sqlite()...')
+    print()
+    myo_person_address_role_export_sqlite(client, person_address_role_args, db_path, table_name)
 
-    # person_address_args = []
-    # table_name = 'clv_person_address'
-    # print('-->', client, person_address_args, db_path, table_name)
-    # print('--> Executing myo_person_address_export_sqlite()...')
-    # print()
-    # myo_person_address_export_sqlite(client, person_address_args, db_path, table_name)
+    person_address_args = []
+    table_name = 'clv_person_address'
+    print('-->', client, person_address_args, db_path, table_name)
+    print('--> Executing myo_person_address_export_sqlite()...')
+    print()
+    myo_person_address_export_sqlite(client, person_address_args, db_path, table_name)
 
-    # person_address_log_args = []
-    # table_name = 'clv_person_address_history_log'
-    # print('-->', client, person_address_log_args, db_path, table_name)
-    # print('--> Executing myo_person_address_log_export_sqlite()...')
-    # print()
-    # myo_person_address_log_export_sqlite(client, person_address_log_args, db_path, table_name)
+    person_address_log_args = []
+    table_name = 'clv_person_address_history_log'
+    print('-->', client, person_address_log_args, db_path, table_name)
+    print('--> Executing myo_person_address_log_export_sqlite()...')
+    print()
+    myo_person_address_log_export_sqlite(client, person_address_log_args, db_path, table_name)
 
-    # survey_survey_args = []
-    # table_name = 'survey_survey'
-    # print('-->', client, survey_survey_args, db_path, table_name)
-    # print('--> Executing survey_survey_export_sqlite()...')
-    # print()
-    # survey_survey_export_sqlite(client, survey_survey_args, db_path, table_name)
+    survey_survey_args = []
+    table_name = 'survey_survey'
+    print('-->', client, survey_survey_args, db_path, table_name)
+    print('--> Executing survey_survey_export_sqlite()...')
+    print()
+    survey_survey_export_sqlite(client, survey_survey_args, db_path, table_name)
 
-    # document_category_args = []
-    # table_name = 'clv_document_category'
-    # print('-->', client, document_category_args, db_path, table_name)
-    # print('--> Executing myo_document_category_export_sqlite()...')
-    # print()
-    # myo_document_category_export_sqlite(client, document_category_args, db_path, table_name)
+    document_category_args = []
+    table_name = 'clv_document_category'
+    print('-->', client, document_category_args, db_path, table_name)
+    print('--> Executing myo_document_category_export_sqlite()...')
+    print()
+    myo_document_category_export_sqlite(client, document_category_args, db_path, table_name)
 
-    # document_args = []
-    # table_name = 'clv_document'
-    # print('-->', client, document_args, db_path, table_name)
-    # print('--> Executing myo_document_export_sqlite()...')
-    # print()
-    # myo_document_export_sqlite(client, document_args, db_path, table_name)
+    document_args = []
+    table_name = 'clv_document'
+    print('-->', client, document_args, db_path, table_name)
+    print('--> Executing myo_document_export_sqlite()...')
+    print()
+    myo_document_export_sqlite(client, document_args, db_path, table_name)
 
-    # document_log_args = []
-    # table_name = 'clv_document_log'
-    # print('-->', client, document_log_args, db_path, table_name)
-    # print('--> Executing myo_document_log_export_sqlite()...')
-    # print()
-    # myo_document_log_export_sqlite(client, document_log_args, db_path, table_name)
+    document_log_args = []
+    table_name = 'clv_document_log'
+    print('-->', client, document_log_args, db_path, table_name)
+    print('--> Executing myo_document_log_export_sqlite()...')
+    print()
+    myo_document_log_export_sqlite(client, document_log_args, db_path, table_name)
 
     document_person_args = []
     table_name = 'clv_document_person'
@@ -170,12 +170,12 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print()
     myo_document_person_export_sqlite(client, document_person_args, db_path, table_name)
 
-    # ir_sequence_args = []
-    # table_name = 'ir_sequence'
-    # print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
-    # print('--> Executing ir_sequence_export_sqlite()...')
-    # print()
-    # ir_sequence_export_sqlite(client, ir_sequence_args, db_path, table_name, conn_string)
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
+    print('--> Executing ir_sequence_export_sqlite()...')
+    print()
+    ir_sequence_export_sqlite(client, ir_sequence_args, db_path, table_name, conn_string)
 
 
 def jcafb_2017_import_sqlite(client, db_path, conn_string):
