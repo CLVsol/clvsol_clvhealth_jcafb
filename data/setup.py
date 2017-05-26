@@ -156,12 +156,19 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     # print()
     # myo_document_export_sqlite(client, document_args, db_path, table_name)
 
-    document_log_args = []
-    table_name = 'clv_document_log'
-    print('-->', client, document_log_args, db_path, table_name)
-    print('--> Executing myo_document_log_export_sqlite()...')
+    # document_log_args = []
+    # table_name = 'clv_document_log'
+    # print('-->', client, document_log_args, db_path, table_name)
+    # print('--> Executing myo_document_log_export_sqlite()...')
+    # print()
+    # myo_document_log_export_sqlite(client, document_log_args, db_path, table_name)
+
+    document_person_args = []
+    table_name = 'clv_document_person'
+    print('-->', client, document_person_args, db_path, table_name)
+    print('--> Executing myo_document_person_export_sqlite()...')
     print()
-    myo_document_log_export_sqlite(client, document_log_args, db_path, table_name)
+    myo_document_person_export_sqlite(client, document_person_args, db_path, table_name)
 
     # ir_sequence_args = []
     # table_name = 'ir_sequence'
