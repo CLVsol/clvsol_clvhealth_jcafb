@@ -135,6 +135,41 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print()
     myo_person_address_log_export_sqlite(client, person_address_log_args, db_path, table_name)
 
+    survey_survey_args = []
+    table_name = 'survey_survey'
+    print('-->', client, survey_survey_args, db_path, table_name)
+    print('--> Executing survey_survey_export_sqlite()...')
+    print()
+    survey_survey_export_sqlite(client, survey_survey_args, db_path, table_name)
+
+    document_category_args = []
+    table_name = 'clv_document_category'
+    print('-->', client, document_category_args, db_path, table_name)
+    print('--> Executing myo_document_category_export_sqlite()...')
+    print()
+    myo_document_category_export_sqlite(client, document_category_args, db_path, table_name)
+
+    document_args = []
+    table_name = 'clv_document'
+    print('-->', client, document_args, db_path, table_name)
+    print('--> Executing myo_document_export_sqlite()...')
+    print()
+    myo_document_export_sqlite(client, document_args, db_path, table_name)
+
+    document_log_args = []
+    table_name = 'clv_document_log'
+    print('-->', client, document_log_args, db_path, table_name)
+    print('--> Executing myo_document_log_export_sqlite()...')
+    print()
+    myo_document_log_export_sqlite(client, document_log_args, db_path, table_name)
+
+    document_person_args = []
+    table_name = 'clv_document_person'
+    print('-->', client, document_person_args, db_path, table_name)
+    print('--> Executing myo_document_person_export_sqlite()...')
+    print()
+    myo_document_person_export_sqlite(client, document_person_args, db_path, table_name)
+
     ir_sequence_args = []
     table_name = 'ir_sequence'
     print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
@@ -394,12 +429,12 @@ if __name__ == '__main__':
     conn_string = "dbname='" + dbname + "' user='" + db_user + "' host='" + db_server + \
                   "' password='" + db_password + "'"
 
-    # # ***** clvhealth-jcafb-2017-pro
-    # #
-    # db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    # print('-->', client, db_path, conn_string)
-    # print('--> Executing jcafb_2017_export_sqlite()...')
-    # jcafb_2017_export_sqlite(client, db_path, conn_string)
+    # ***** clvhealth-jcafb-2017-pro
+    #
+    db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    print('-->', client, db_path, conn_string)
+    print('--> Executing jcafb_2017_export_sqlite()...')
+    jcafb_2017_export_sqlite(client, db_path, conn_string)
 
     # # ***** tkl-odoo10-vm
     # #
