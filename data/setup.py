@@ -326,12 +326,30 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     # clv_person_address_history_log_import_sqlite(client, person_address_history_log_args, db_path, table_name,
     #                                              person_address_history_table_name, res_users_table_name)
 
-    document_category_args = []
-    table_name = 'clv_document_category'
-    print('-->', client, document_category_args, db_path, table_name)
-    print('--> Executing clv_document_category_import_sqlite()...')
+    # document_category_args = []
+    # table_name = 'clv_document_category'
+    # print('-->', client, document_category_args, db_path, table_name)
+    # print('--> Executing clv_document_category_import_sqlite()...')
+    # print()
+    # clv_document_category_import_sqlite(client, document_category_args, db_path, table_name)
+
+    document_args = []
+    table_name = 'clv_document'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_document_category'
+    survey_survey_table_name = 'survey_survey'
+    res_users_table_name = 'res_users'
+    print(
+        '-->',
+        client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
+        survey_survey_table_name, res_users_table_name
+    )
+    print('--> Executing clv_document_import_sqlite()...')
     print()
-    clv_document_category_import_sqlite(client, document_category_args, db_path, table_name)
+    clv_document_import_sqlite(
+        client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
+        survey_survey_table_name, res_users_table_name
+    )
 
 
 def get_arguments():
