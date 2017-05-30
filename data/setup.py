@@ -189,10 +189,11 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
 
     res_users_args = []
     table_name = 'res_users'
-    print('-->', client, res_users_args, db_path, table_name)
+    res_partner_table_name = 'res_partner'
+    print('-->', client, res_users_args, db_path, table_name, res_partner_table_name)
     print('--> Executing res_users_import_sqlite()...')
     print()
-    res_users_import_sqlite(client, res_users_args, db_path, table_name)
+    res_users_import_sqlite(client, res_users_args, db_path, table_name, res_partner_table_name)
 
     hr_department_args = []
     table_name = 'hr_department'
