@@ -523,6 +523,13 @@ def install():
     install_update_module('clv_event', update, group_names)
 
     group_names = [
+        'User (Media File)',
+        'Manager (Media File)',
+        'Super Manager (Media File)',
+    ]
+    install_update_module('clv_mfile', update, group_names)
+
+    group_names = [
         'User (Person)',
         'Manager (Person)',
         'Super Manager (Person)',
@@ -605,6 +612,9 @@ def install():
 
     group_names = []
     install_update_module('clv_survey_QSI17', update, group_names)
+
+    group_names = []
+    install_update_module('clv_mfile_jcafb', update, group_names)
 
 
 def secondsToStr(t):
