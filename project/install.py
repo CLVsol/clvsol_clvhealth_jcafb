@@ -556,6 +556,14 @@ def install():
     ]
     install_update_module('clv_survey', update, group_names)
 
+    group_names = [
+        'User (Lab Test)',
+        'Manager (Lab Test)',
+        'Super Manager (Lab Test)',
+        'Approver (Lab Test)',
+    ]
+    install_update_module('clv_lab_test', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
@@ -615,6 +623,9 @@ def install():
 
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_lab_test_jcafb', update, group_names)
 
 
 def secondsToStr(t):
