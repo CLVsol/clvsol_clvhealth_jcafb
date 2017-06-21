@@ -537,6 +537,13 @@ def install():
     install_update_module('clv_person', update, group_names)
 
     group_names = [
+        'User (Animal)',
+        'Manager (Animal)',
+        'Super Manager (Animal)',
+    ]
+    install_update_module('clv_animal', update, group_names)
+
+    group_names = [
         'User (Community)',
         'Manager (Community)',
         'Super Manager (Community)',
