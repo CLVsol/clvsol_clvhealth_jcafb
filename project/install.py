@@ -602,6 +602,9 @@ def install():
     install_update_module('clv_person_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_animal_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_survey_TCP17', update, group_names)
 
     group_names = []
