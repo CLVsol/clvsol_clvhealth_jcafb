@@ -604,32 +604,32 @@ def install():
     group_names = []
     install_update_module('clv_animal_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_TCP17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_TCP17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_TCR17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_TCR17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_TID17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_TID17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QAN17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QAN17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QDH17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QDH17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QMD17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QMD17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QSC17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QSC17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QSF17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QSF17', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_QSI17', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_QSI17', update, group_names)
 
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
