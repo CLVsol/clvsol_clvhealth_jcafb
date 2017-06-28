@@ -60,7 +60,7 @@ admin_user = 'admin'
 admin_pw = 'admin'
 admin_user_pw = 'admin'
 data_admin_user_pw = 'data.admin'
-dbname = 'clvhealth_jcafb_dev'
+dbname = 'clvhealth_jcafb'
 demo_data = False
 modules_to_update = []
 
@@ -470,8 +470,8 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('mass_editing', update, group_names)
+    # group_names = []
+    # install_update_module('mass_editing', update, group_names)
 
     # ################################################################################################################
     #
