@@ -30,6 +30,27 @@ from odoo_api import *
 
 def jcafb_2017_export_sqlite(client, db_path, conn_string):
 
+    res_country_args = []
+    table_name = 'res_country'
+    print('-->', client, res_country_args, db_path, table_name)
+    print('--> Executing res_country_export_sqlite()...')
+    print()
+    res_country_export_sqlite(client, res_country_args, db_path, table_name)
+
+    res_country_state_args = []
+    table_name = 'res_country_state'
+    print('-->', client, res_country_state_args, db_path, table_name)
+    print('--> Executing res_country_state_export_sqlite()...')
+    print()
+    res_country_state_export_sqlite(client, res_country_state_args, db_path, table_name)
+
+    l10n_br_base_city_args = []
+    table_name = 'l10n_br_base_city'
+    print('-->', client, l10n_br_base_city_args, db_path, table_name)
+    print('--> Executing l10n_br_base_city_export_sqlite()...')
+    print()
+    l10n_br_base_city_export_sqlite(client, l10n_br_base_city_args, db_path, table_name)
+
     res_partner_args = []
     table_name = 'res_partner'
     print('-->', client, res_partner_args, db_path, table_name)
