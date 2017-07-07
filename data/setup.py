@@ -210,10 +210,11 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
 
     res_users_args = []
     table_name = 'res_users'
-    print('-->', client, res_users_args, db_path, table_name)
+    res_partner_table_name = 'res_partner'
+    print('-->', client, res_users_args, db_path, table_name, res_partner_table_name)
     print('--> Executing res_users_import_sqlite()...')
     print()
-    res_users_import_sqlite(client, res_users_args, db_path, table_name)
+    res_users_import_sqlite(client, res_users_args, db_path, table_name, res_partner_table_name)
 
     hr_department_args = []
     table_name = 'hr_department'
@@ -359,17 +360,19 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     global_tag_table_name = 'clv_global_tag'
     category_table_name = 'clv_document_category'
     survey_survey_table_name = 'survey_survey'
+    person_table_name = 'clv_person'
+    address_table_name = 'clv_address'
     res_users_table_name = 'res_users'
     print(
         '-->',
         client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
-        survey_survey_table_name, res_users_table_name
+        survey_survey_table_name, person_table_name, address_table_name, res_users_table_name
     )
     print('--> Executing clv_document_import_sqlite()...')
     print()
     clv_document_import_sqlite(
         client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
-        survey_survey_table_name, res_users_table_name
+        survey_survey_table_name, person_table_name, address_table_name, res_users_table_name
     )
 
     document_log_args = []
@@ -492,12 +495,12 @@ if __name__ == '__main__':
     # print('--> Executing jcafb_2017_export_sqlite()...')
     # jcafb_2017_export_sqlite(client, db_path, conn_string)
 
-    # # ***** tkl-odoo10-vm
-    # #
-    # db_path = 'data/clvhealth_jcafb_2017.sqlite'
-    # print('-->', client, db_path, conn_string)
-    # print('--> Executing jcafb_2017_import_sqlite()...')
-    # jcafb_2017_import_sqlite(client, db_path, conn_string)
+    # ***** tkl-odoo10-vm
+    #
+    db_path = 'data/clvhealth_jcafb_2017.sqlite'
+    print('-->', client, db_path, conn_string)
+    print('--> Executing jcafb_2017_import_sqlite()...')
+    jcafb_2017_import_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))

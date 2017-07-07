@@ -60,7 +60,7 @@ admin_user = 'admin'
 admin_pw = 'admin'
 admin_user_pw = 'admin'
 data_admin_user_pw = 'data.admin'
-dbname = 'clvhealth_jcafb_dev'
+dbname = 'clvhealth_jcafb'
 demo_data = False
 modules_to_update = []
 
@@ -470,8 +470,8 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('mass_editing', update, group_names)
+    # group_names = []
+    # install_update_module('mass_editing', update, group_names)
 
     # ################################################################################################################
     #
@@ -523,11 +523,25 @@ def install():
     install_update_module('clv_event', update, group_names)
 
     group_names = [
+        'User (Media File)',
+        'Manager (Media File)',
+        'Super Manager (Media File)',
+    ]
+    install_update_module('clv_mfile', update, group_names)
+
+    group_names = [
         'User (Person)',
         'Manager (Person)',
         'Super Manager (Person)',
     ]
     install_update_module('clv_person', update, group_names)
+
+    group_names = [
+        'User (Animal)',
+        'Manager (Animal)',
+        'Super Manager (Animal)',
+    ]
+    install_update_module('clv_animal', update, group_names)
 
     group_names = [
         'User (Community)',
@@ -540,6 +554,9 @@ def install():
     install_update_module('clv_person_address_history', update, group_names)
 
     group_names = []
+    install_update_module('clv_animal_address_history', update, group_names)
+
+    group_names = []
     install_update_module('clv_employee', update, group_names)
 
     group_names = [
@@ -548,6 +565,14 @@ def install():
         'Super Manager (Survey)',
     ]
     install_update_module('clv_survey', update, group_names)
+
+    group_names = [
+        'User (Lab Test)',
+        'Manager (Lab Test)',
+        'Super Manager (Lab Test)',
+        'Approver (Lab Test)',
+    ]
+    install_update_module('clv_lab_test', update, group_names)
 
     # ################################################################################################################
     #
@@ -580,31 +605,43 @@ def install():
     install_update_module('clv_person_jcafb', update, group_names)
 
     group_names = []
-    install_update_module('clv_survey_TCP17', update, group_names)
+    install_update_module('clv_animal_jcafb', update, group_names)
 
     group_names = []
-    install_update_module('clv_survey_TCR17', update, group_names)
+    install_update_module('clv_survey_jcafb_2017', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_TCP17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_TCR17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_TID17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QAN17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QDH17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QMD17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QSC17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QSF17', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_survey_QSI17', update, group_names)
 
     group_names = []
-    install_update_module('clv_survey_TID17', update, group_names)
+    install_update_module('clv_mfile_jcafb', update, group_names)
 
     group_names = []
-    install_update_module('clv_survey_QAN17', update, group_names)
-
-    group_names = []
-    install_update_module('clv_survey_QDH17', update, group_names)
-
-    group_names = []
-    install_update_module('clv_survey_QMD17', update, group_names)
-
-    group_names = []
-    install_update_module('clv_survey_QSC17', update, group_names)
-
-    group_names = []
-    install_update_module('clv_survey_QSF17', update, group_names)
-
-    group_names = []
-    install_update_module('clv_survey_QSI17', update, group_names)
+    install_update_module('clv_lab_test_jcafb', update, group_names)
 
 
 def secondsToStr(t):
