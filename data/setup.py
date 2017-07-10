@@ -266,31 +266,51 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
     )
 
-    # address_category_args = []
-    # table_name = 'clv_address_category'
-    # print('-->', client, address_category_args, db_path, table_name)
-    # print('--> Executing clv_address_category_import_sqlite()...')
-    # print()
-    # clv_address_category_import_sqlite(client, address_category_args, db_path, table_name)
+    address_category_args = []
+    table_name = 'clv_address_category'
+    print('-->', client, address_category_args, db_path, table_name)
+    print('--> Executing clv_address_category_import_sqlite()...')
+    print()
+    clv_address_category_import_sqlite(client, address_category_args, db_path, table_name)
 
-    # address_args = []
-    # table_name = 'clv_address'
-    # global_tag_table_name = 'clv_global_tag'
-    # category_table_name = 'clv_address_category'
-    # print('-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name)
-    # print('--> Executing clv_address_import_sqlite()...')
-    # print()
-    # clv_address_import_sqlite(client, address_args, db_path, table_name, global_tag_table_name, category_table_name)
+    address_args = []
+    table_name = 'clv_address'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_address_category'
+    res_country_table_name = 'res_country'
+    res_country_state_table_name = 'res_country_state'
+    l10n_br_base_city_table_name = 'l10n_br_base_city'
+    print(
+        '-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name
+    )
+    print('--> Executing clv_address_import_sqlite()...')
+    print()
+    clv_address_import_sqlite(
+        client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name
+    )
 
-    # address_log_args = []
-    # table_name = 'clv_address_log'
-    # address_table_name = 'clv_address'
-    # res_users_table_name = 'res_users'
-    # print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
-    # print('--> Executing clv_address_log_import_sqlite()...')
-    # print()
-    # clv_address_log_import_sqlite(client, address_log_args, db_path, table_name,
-    #                               address_table_name, res_users_table_name)
+    address_log_args = []
+    table_name = 'clv_address_log'
+    address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
+    print('--> Executing clv_address_log_import_sqlite()...')
+    print()
+    clv_address_log_import_sqlite(client, address_log_args, db_path, table_name,
+                                  address_table_name, res_users_table_name)
+
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'myo.address.code'
+    output_code = 'clv.address.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named()...')
+    print()
+    ir_sequence_import_sqlite_named(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
 
     # person_category_args = []
     # table_name = 'clv_person_category'
