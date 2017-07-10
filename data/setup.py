@@ -201,6 +201,13 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
 
 def jcafb_2017_import_sqlite(client, db_path, conn_string):
 
+    global_tag_args = []
+    table_name = 'clv_global_tag'
+    print('-->', client, global_tag_args, db_path, table_name)
+    print('--> Executing clv_global_tag_import_sqlite()...')
+    print()
+    clv_global_tag_import_sqlite(client, global_tag_args, db_path, table_name)
+
     res_partner_args = []
     table_name = 'res_partner'
     print('-->', client, res_partner_args, db_path, table_name)
@@ -247,13 +254,6 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
         res_partner_table_name, res_users_table_name
     )
-
-    # global_tag_args = []
-    # table_name = 'clv_global_tag'
-    # print('-->', client, global_tag_args, db_path, table_name)
-    # print('--> Executing clv_global_tag_import_sqlite()...')
-    # print()
-    # clv_global_tag_import_sqlite(client, global_tag_args, db_path, table_name)
 
     # address_category_args = []
     # table_name = 'clv_address_category'

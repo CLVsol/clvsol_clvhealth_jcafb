@@ -583,8 +583,8 @@ def install():
     group_names = []
     install_update_module('clv_l10n_br_base', update, group_names)
 
-    group_names = []
-    install_update_module('clv_address_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_address_l10n_br', update, group_names)
 
     # ################################################################################################################
     #
