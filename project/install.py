@@ -500,6 +500,9 @@ def install():
     ]
     install_update_module('clv_global_tag', update, group_names)
 
+    group_names = []
+    install_update_module('clv_employee', update, group_names)
+
     # group_names = [
     #     'User (Address)',
     #     'Manager (Address)',
@@ -556,9 +559,6 @@ def install():
     # group_names = []
     # install_update_module('clv_animal_address_history', update, group_names)
 
-    group_names = []
-    install_update_module('clv_employee', update, group_names)
-
     # group_names = [
     #     'User (Survey)',
     #     'Manager (Survey)',
@@ -594,6 +594,9 @@ def install():
 
     group_names = []
     install_update_module('clv_base_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_employee_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_address_jcafb', update, group_names)

@@ -255,6 +255,17 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         res_partner_table_name, res_users_table_name
     )
 
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'hr.employee.code'
+    output_code = 'hr.employee.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named()...')
+    print()
+    ir_sequence_import_sqlite_named(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
+
     # address_category_args = []
     # table_name = 'clv_address_category'
     # print('-->', client, address_category_args, db_path, table_name)
