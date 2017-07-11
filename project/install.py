@@ -586,6 +586,9 @@ def install():
     group_names = []
     install_update_module('clv_address_l10n_br', update, group_names)
 
+    group_names = []
+    install_update_module('clv_person_l10n_br', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - JCAFB customizations
