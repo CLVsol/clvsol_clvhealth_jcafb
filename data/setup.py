@@ -280,15 +280,18 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     res_country_table_name = 'res_country'
     res_country_state_table_name = 'res_country_state'
     l10n_br_base_city_table_name = 'l10n_br_base_city'
+    res_users_table_name = 'res_users'
     print(
         '-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
-        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        res_users_table_name
     )
     print('--> Executing clv_address_import_sqlite()...')
     print()
     clv_address_import_sqlite(
         client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
-        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        res_users_table_name
     )
 
     ir_sequence_args = []
@@ -331,14 +334,17 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     global_tag_table_name = 'clv_global_tag'
     category_table_name = 'clv_person_category'
     address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
     print(
         '-->',
-        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
     )
     print('--> Executing clv_person_import_sqlite()...')
     print()
     clv_person_import_sqlite(
-        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
     )
 
     ir_sequence_args = []
