@@ -331,14 +331,17 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     global_tag_table_name = 'clv_global_tag'
     category_table_name = 'clv_person_category'
     address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
     print(
         '-->',
-        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
     )
     print('--> Executing clv_person_import_sqlite()...')
     print()
     clv_person_import_sqlite(
-        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
     )
 
     ir_sequence_args = []
