@@ -500,6 +500,13 @@ def install():
     ]
     install_update_module('clv_global_tag', update, group_names)
 
+    group_names = [
+        'User (Global Marker)',
+        'Manager (Global Marker)',
+        'Super Manager (Global Marker)',
+    ]
+    install_update_module('clv_global_marker', update, group_names)
+
     group_names = []
     install_update_module('clv_employee', update, group_names)
 
