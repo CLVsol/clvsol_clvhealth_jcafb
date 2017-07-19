@@ -201,64 +201,103 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
 
 def jcafb_2017_import_sqlite(client, db_path, conn_string):
 
-    global_tag_args = []
-    table_name = 'clv_global_tag'
-    print('-->', client, global_tag_args, db_path, table_name)
-    print('--> Executing clv_global_tag_import_sqlite()...')
-    print()
-    clv_global_tag_import_sqlite(client, global_tag_args, db_path, table_name)
+    # global_tag_args = []
+    # table_name = 'clv_global_tag'
+    # print('-->', client, global_tag_args, db_path, table_name)
+    # print('--> Executing clv_global_tag_import_sqlite()...')
+    # print()
+    # clv_global_tag_import_sqlite(client, global_tag_args, db_path, table_name)
 
-    res_partner_args = []
-    table_name = 'res_partner'
-    print('-->', client, res_partner_args, db_path, table_name)
-    print('--> Executing res_partner_import_sqlite()...')
-    print()
-    res_partner_import_sqlite(client, res_partner_args, db_path, table_name)
+    # res_partner_args = []
+    # table_name = 'res_partner'
+    # print('-->', client, res_partner_args, db_path, table_name)
+    # print('--> Executing res_partner_import_sqlite()...')
+    # print()
+    # res_partner_import_sqlite(client, res_partner_args, db_path, table_name)
 
-    res_users_args = []
-    table_name = 'res_users'
-    res_partner_table_name = 'res_partner'
-    print('-->', client, res_users_args, db_path, table_name, res_partner_table_name)
-    print('--> Executing res_users_import_sqlite()...')
-    print()
-    res_users_import_sqlite(client, res_users_args, db_path, table_name, res_partner_table_name)
+    # res_users_args = []
+    # table_name = 'res_users'
+    # res_partner_table_name = 'res_partner'
+    # print('-->', client, res_users_args, db_path, table_name, res_partner_table_name)
+    # print('--> Executing res_users_import_sqlite()...')
+    # print()
+    # res_users_import_sqlite(client, res_users_args, db_path, table_name, res_partner_table_name)
 
-    hr_department_args = []
-    table_name = 'hr_department'
-    print('-->', client, hr_department_args, db_path, table_name)
-    print('--> Executing hr_department_import_sqlite()...')
-    print()
-    hr_department_import_sqlite(client, hr_department_args, db_path, table_name)
+    # hr_department_args = []
+    # table_name = 'hr_department'
+    # print('-->', client, hr_department_args, db_path, table_name)
+    # print('--> Executing hr_department_import_sqlite()...')
+    # print()
+    # hr_department_import_sqlite(client, hr_department_args, db_path, table_name)
 
-    hr_job_args = []
-    table_name = 'hr_job'
-    print('-->', client, hr_job_args, db_path, table_name)
-    print('--> Executing hr_job_import_sqlite()...')
-    print()
-    hr_job_import_sqlite(client, hr_job_args, db_path, table_name)
+    # hr_job_args = []
+    # table_name = 'hr_job'
+    # print('-->', client, hr_job_args, db_path, table_name)
+    # print('--> Executing hr_job_import_sqlite()...')
+    # print()
+    # hr_job_import_sqlite(client, hr_job_args, db_path, table_name)
 
-    hr_employee_args = []
-    table_name = 'hr_employee'
-    hr_department_table_name = 'hr_department'
-    hr_job_table_name = 'hr_job'
-    res_partner_table_name = 'res_partner'
+    # hr_employee_args = []
+    # table_name = 'hr_employee'
+    # hr_department_table_name = 'hr_department'
+    # hr_job_table_name = 'hr_job'
+    # res_partner_table_name = 'res_partner'
+    # res_users_table_name = 'res_users'
+    # print(
+    #     '-->',
+    #     client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+    #     res_partner_table_name, res_users_table_name
+    # )
+    # print('--> Executing hr_employee_import_sqlite()...')
+    # print()
+    # hr_employee_import_sqlite(
+    #     client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+    #     res_partner_table_name, res_users_table_name
+    # )
+
+    # ir_sequence_args = []
+    # table_name = 'ir_sequence'
+    # input_code = 'hr.employee.code'
+    # output_code = 'hr.employee.code'
+    # print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    # print('--> Executing ir_sequence_import_sqlite_named()...')
+    # print()
+    # ir_sequence_import_sqlite_named(
+    #     client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    # )
+
+    address_category_args = []
+    table_name = 'clv_address_category'
+    print('-->', client, address_category_args, db_path, table_name)
+    print('--> Executing clv_address_category_import_sqlite()...')
+    print()
+    clv_address_category_import_sqlite(client, address_category_args, db_path, table_name)
+
+    address_args = []
+    table_name = 'clv_address'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_address_category'
+    res_country_table_name = 'res_country'
+    res_country_state_table_name = 'res_country_state'
+    l10n_br_base_city_table_name = 'l10n_br_base_city'
     res_users_table_name = 'res_users'
     print(
-        '-->',
-        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
-        res_partner_table_name, res_users_table_name
+        '-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        res_users_table_name
     )
-    print('--> Executing hr_employee_import_sqlite()...')
+    print('--> Executing clv_address_import_sqlite()...')
     print()
-    hr_employee_import_sqlite(
-        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
-        res_partner_table_name, res_users_table_name
+    clv_address_import_sqlite(
+        client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        res_users_table_name
     )
 
     ir_sequence_args = []
     table_name = 'ir_sequence'
-    input_code = 'hr.employee.code'
-    output_code = 'hr.employee.code'
+    input_code = 'myo.address.code'
+    output_code = 'clv.address.code'
     print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
     print('--> Executing ir_sequence_import_sqlite_named()...')
     print()
@@ -266,135 +305,96 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
     )
 
-    # address_category_args = []
-    # table_name = 'clv_address_category'
-    # print('-->', client, address_category_args, db_path, table_name)
-    # print('--> Executing clv_address_category_import_sqlite()...')
-    # print()
-    # clv_address_category_import_sqlite(client, address_category_args, db_path, table_name)
+    address_log_args = []
+    table_name = 'clv_address_log'
+    address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
+    print('--> Executing clv_address_log_import_sqlite()...')
+    print()
+    clv_address_log_import_sqlite(client, address_log_args, db_path, table_name,
+                                  address_table_name, res_users_table_name)
 
-    # address_args = []
-    # table_name = 'clv_address'
-    # global_tag_table_name = 'clv_global_tag'
-    # category_table_name = 'clv_address_category'
-    # res_country_table_name = 'res_country'
-    # res_country_state_table_name = 'res_country_state'
-    # l10n_br_base_city_table_name = 'l10n_br_base_city'
-    # res_users_table_name = 'res_users'
-    # print(
-    #     '-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
-    #     res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
-    #     res_users_table_name
-    # )
-    # print('--> Executing clv_address_import_sqlite()...')
-    # print()
-    # clv_address_import_sqlite(
-    #     client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
-    #     res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
-    #     res_users_table_name
-    # )
+    person_category_args = []
+    table_name = 'clv_person_category'
+    print('-->', client, person_category_args, db_path, table_name)
+    print('--> Executing clv_person_category_import_sqlite()...')
+    print()
+    clv_person_category_import_sqlite(client, person_category_args, db_path, table_name)
 
-    # ir_sequence_args = []
-    # table_name = 'ir_sequence'
-    # input_code = 'myo.address.code'
-    # output_code = 'clv.address.code'
-    # print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
-    # print('--> Executing ir_sequence_import_sqlite_named()...')
-    # print()
-    # ir_sequence_import_sqlite_named(
-    #     client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
-    # )
+    person_address_role_args = []
+    table_name = 'clv_person_address_role'
+    print('-->', client, person_address_role_args, db_path, table_name)
+    print('--> Executing clv_person_address_role_import_sqlite()...')
+    print()
+    clv_person_address_role_import_sqlite(client, person_address_role_args, db_path, table_name)
 
-    # address_log_args = []
-    # table_name = 'clv_address_log'
-    # address_table_name = 'clv_address'
-    # res_users_table_name = 'res_users'
-    # print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
-    # print('--> Executing clv_address_log_import_sqlite()...')
-    # print()
-    # clv_address_log_import_sqlite(client, address_log_args, db_path, table_name,
-    #                               address_table_name, res_users_table_name)
+    person_args = []
+    table_name = 'clv_person'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_person_category'
+    address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
+    print(
+        '-->',
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
+    )
+    print('--> Executing clv_person_import_sqlite()...')
+    print()
+    clv_person_import_sqlite(
+        client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
+        res_users_table_name
+    )
 
-    # person_category_args = []
-    # table_name = 'clv_person_category'
-    # print('-->', client, person_category_args, db_path, table_name)
-    # print('--> Executing clv_person_category_import_sqlite()...')
-    # print()
-    # clv_person_category_import_sqlite(client, person_category_args, db_path, table_name)
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'myo.person.code'
+    output_code = 'clv.person.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named()...')
+    print()
+    ir_sequence_import_sqlite_named(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
 
-    # person_address_role_args = []
-    # table_name = 'clv_person_address_role'
-    # print('-->', client, person_address_role_args, db_path, table_name)
-    # print('--> Executing clv_person_address_role_import_sqlite()...')
-    # print()
-    # clv_person_address_role_import_sqlite(client, person_address_role_args, db_path, table_name)
+    person_log_args = []
+    table_name = 'clv_person_log'
+    person_table_name = 'clv_person'
+    res_users_table_name = 'res_users'
+    print('-->', client, person_log_args, db_path, table_name, person_table_name, res_users_table_name)
+    print('--> Executing clv_person_log_import_sqlite()...')
+    print()
+    clv_person_log_import_sqlite(client, person_log_args, db_path, table_name,
+                                 person_table_name, res_users_table_name)
 
-    # person_args = []
-    # table_name = 'clv_person'
-    # global_tag_table_name = 'clv_global_tag'
-    # category_table_name = 'clv_person_category'
-    # address_table_name = 'clv_address'
-    # res_users_table_name = 'res_users'
-    # print(
-    #     '-->',
-    #     client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
-    #     res_users_table_name
-    # )
-    # print('--> Executing clv_person_import_sqlite()...')
-    # print()
-    # clv_person_import_sqlite(
-    #     client, person_args, db_path, table_name, global_tag_table_name, category_table_name, address_table_name,
-    #     res_users_table_name
-    # )
+    person_address_history_args = []
+    table_name = 'clv_person_address'
+    global_tag_table_name = 'clv_global_tag'
+    role_table_name = 'clv_person_address_role'
+    person_table_name = 'clv_person'
+    address_table_name = 'clv_address'
+    print(
+        '-->', client, person_address_history_args, db_path, table_name, global_tag_table_name,
+        role_table_name, person_table_name, address_table_name
+    )
+    print('--> Executing clv_person_address_history_import_sqlite()...')
+    print()
+    clv_person_address_history_import_sqlite(
+        client, person_address_history_args, db_path, table_name, global_tag_table_name,
+        role_table_name, person_table_name, address_table_name
+    )
 
-    # ir_sequence_args = []
-    # table_name = 'ir_sequence'
-    # input_code = 'myo.person.code'
-    # output_code = 'clv.person.code'
-    # print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
-    # print('--> Executing ir_sequence_import_sqlite_named()...')
-    # print()
-    # ir_sequence_import_sqlite_named(
-    #     client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
-    # )
-
-    # person_log_args = []
-    # table_name = 'clv_person_log'
-    # person_table_name = 'clv_person'
-    # res_users_table_name = 'res_users'
-    # print('-->', client, person_log_args, db_path, table_name, person_table_name, res_users_table_name)
-    # print('--> Executing clv_person_log_import_sqlite()...')
-    # print()
-    # clv_person_log_import_sqlite(client, person_log_args, db_path, table_name,
-    #                              person_table_name, res_users_table_name)
-
-    # person_address_history_args = []
-    # table_name = 'clv_person_address'
-    # global_tag_table_name = 'clv_global_tag'
-    # role_table_name = 'clv_person_address_role'
-    # person_table_name = 'clv_person'
-    # address_table_name = 'clv_address'
-    # print(
-    #     '-->', client, person_address_history_args, db_path, table_name, global_tag_table_name,
-    #     role_table_name, person_table_name, address_table_name
-    # )
-    # print('--> Executing clv_person_address_history_import_sqlite()...')
-    # print()
-    # clv_person_address_history_import_sqlite(
-    #     client, person_address_history_args, db_path, table_name, global_tag_table_name,
-    #     role_table_name, person_table_name, address_table_name
-    # )
-
-    # person_address_history_log_args = []
-    # table_name = 'clv_person_address_history_log'
-    # person_address_history_table_name = 'clv_person_address'
-    # res_users_table_name = 'res_users'
-    # print('-->', client, person_address_history_log_args, db_path, table_name,
-    #       person_address_history_table_name, res_users_table_name)
-    # print('--> Executing clv_person_address_history_log_import_sqlite()...')
-    # print()
-    # clv_person_address_history_log_import_sqlite(client, person_address_history_log_args, db_path, table_name,
-    #                                              person_address_history_table_name, res_users_table_name)
+    person_address_history_log_args = []
+    table_name = 'clv_person_address_history_log'
+    person_address_history_table_name = 'clv_person_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, person_address_history_log_args, db_path, table_name,
+          person_address_history_table_name, res_users_table_name)
+    print('--> Executing clv_person_address_history_log_import_sqlite()...')
+    print()
+    clv_person_address_history_log_import_sqlite(client, person_address_history_log_args, db_path, table_name,
+                                                 person_address_history_table_name, res_users_table_name)
 
     # document_category_args = []
     # table_name = 'clv_document_category'
