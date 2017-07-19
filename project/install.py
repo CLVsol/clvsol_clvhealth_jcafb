@@ -513,22 +513,28 @@ def install():
     group_names = []
     install_update_module('clv_employee_history', update, group_names)
 
-    # group_names = [
-    #     'User (Address)',
-    #     'Manager (Address)',
-    #     'Super Manager (Address)',
-    # ]
-    # install_update_module('clv_address', update, group_names)
+    group_names = [
+        'User (Address)',
+        'Manager (Address)',
+        'Super Manager (Address)',
+    ]
+    install_update_module('clv_address', update, group_names)
 
-    # group_names = [
-    #     'User (Person)',
-    #     'Manager (Person)',
-    #     'Super Manager (Person)',
-    # ]
-    # install_update_module('clv_person', update, group_names)
+    group_names = []
+    install_update_module('clv_address_history', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_address_history', update, group_names)
+    group_names = [
+        'User (Person)',
+        'Manager (Person)',
+        'Super Manager (Person)',
+    ]
+    install_update_module('clv_person', update, group_names)
+
+    group_names = []
+    install_update_module('clv_person_history', update, group_names)
+
+    group_names = []
+    install_update_module('clv_person_address_history', update, group_names)
 
     # group_names = [
     #     'User (Document)',
@@ -593,11 +599,11 @@ def install():
     group_names = []
     install_update_module('clv_l10n_br_base', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_address_l10n_br', update, group_names)
+    group_names = []
+    install_update_module('clv_address_l10n_br', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_l10n_br', update, group_names)
+    group_names = []
+    install_update_module('clv_person_l10n_br', update, group_names)
 
     # ################################################################################################################
     #
@@ -611,11 +617,11 @@ def install():
     group_names = []
     install_update_module('clv_employee_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_address_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_address_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_person_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_document_jcafb', update, group_names)
