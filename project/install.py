@@ -510,6 +510,9 @@ def install():
     group_names = []
     install_update_module('clv_employee', update, group_names)
 
+    group_names = []
+    install_update_module('clv_employee_history', update, group_names)
+
     # group_names = [
     #     'User (Address)',
     #     'Manager (Address)',
