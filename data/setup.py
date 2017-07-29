@@ -400,45 +400,127 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     clv_person_address_history_log_import_sqlite(client, person_address_history_log_args, db_path, table_name,
                                                  person_address_history_table_name, res_users_table_name)
 
-    document_category_args = []
-    table_name = 'clv_document_category'
-    print('-->', client, document_category_args, db_path, table_name)
-    print('--> Executing clv_document_category_import_sqlite()...')
-    print()
-    clv_document_category_import_sqlite(client, document_category_args, db_path, table_name)
+    # document_category_args = []
+    # table_name = 'clv_document_category'
+    # print('-->', client, document_category_args, db_path, table_name)
+    # print('--> Executing clv_document_category_import_sqlite()...')
+    # print()
+    # clv_document_category_import_sqlite(client, document_category_args, db_path, table_name)
 
-    document_args = []
-    table_name = 'clv_document'
+    # document_args = []
+    # table_name = 'clv_document'
+    # global_tag_table_name = 'clv_global_tag'
+    # category_table_name = 'clv_document_category'
+    # survey_survey_table_name = 'survey_survey'
+    # person_table_name = 'clv_person'
+    # address_table_name = 'clv_address'
+    # res_users_table_name = 'res_users'
+    # history_marker_name = 'JCAFB-2017'
+    # print(
+    #     '-->',
+    #     client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
+    #     survey_survey_table_name, person_table_name, address_table_name, res_users_table_name,
+    #     history_marker_name
+    # )
+    # print('--> Executing clv_document_import_sqlite()...')
+    # print()
+    # clv_document_import_sqlite(
+    #     client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
+    #     survey_survey_table_name, person_table_name, address_table_name, res_users_table_name,
+    #     history_marker_name
+    # )
+
+    # document_log_args = []
+    # table_name = 'clv_document_log'
+    # document_table_name = 'clv_document'
+    # res_users_table_name = 'res_users'
+    # print('-->', client, document_log_args, db_path, table_name, document_table_name, res_users_table_name)
+    # print('--> Executing clv_document_log_import_sqlite()...')
+    # print()
+    # clv_document_log_import_sqlite(client, document_log_args, db_path, table_name,
+    #                                document_table_name, res_users_table_name)
+
+
+def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
+
+    hr_employee_args = []
+    table_name = 'hr_employee'
+    print('-->', client, hr_employee_args, db_path, table_name)
+    print('--> Executing hr_employee_export_sqlite_10()...')
+    print()
+    hr_employee_export_sqlite_10(client, hr_employee_args, db_path, table_name)
+
+    tag_args = []
+    table_name = 'clv_global_tag'
+    print('-->', client, tag_args, db_path, table_name)
+    print('--> Executing clv_global_tag_export_sqlite_10()...')
+    print()
+    clv_global_tag_export_sqlite_10(client, tag_args, db_path, table_name)
+
+    history_marker_args = []
+    table_name = 'clv_history_marker'
+    print('-->', client, history_marker_args, db_path, table_name)
+    print('--> Executing clv_history_marker_export_sqlite_10()...')
+    print()
+    clv_history_marker_export_sqlite_10(client, history_marker_args, db_path, table_name)
+
+    person_args = []
+    table_name = 'clv_person'
+    print('-->', client, person_args, db_path, table_name)
+    print('--> Executing clv_person_export_sqlite_10()...')
+    print()
+    clv_person_export_sqlite_10(client, person_args, db_path, table_name)
+
+    event_category_args = []
+    table_name = 'clv_event_category'
+    print('-->', client, event_category_args, db_path, table_name)
+    print('--> Executing clv_event_category_export_sqlite_10()...')
+    print()
+    clv_event_category_export_sqlite_10(client, event_category_args, db_path, table_name)
+
+    event_args = []
+    table_name = 'clv_event'
+    print('-->', client, event_args, db_path, table_name)
+    print('--> Executing clv_event_export_sqlite_10()...')
+    print()
+    clv_event_export_sqlite_10(client, event_args, db_path, table_name)
+
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
+    print('--> Executing ir_sequence_export_sqlite_10()...')
+    print()
+    ir_sequence_export_sqlite_10(client, ir_sequence_args, db_path, table_name, conn_string)
+
+
+def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
+
+    event_args = []
+    table_name = 'clv_event'
     global_tag_table_name = 'clv_global_tag'
-    category_table_name = 'clv_document_category'
-    survey_survey_table_name = 'survey_survey'
+    category_table_name = 'clv_person_category'
+    hr_employee_table_name = 'hr_employee'
     person_table_name = 'clv_person'
-    address_table_name = 'clv_address'
-    res_users_table_name = 'res_users'
-    history_marker_name = 'JCAFB-2017'
-    print(
-        '-->',
-        client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
-        survey_survey_table_name, person_table_name, address_table_name, res_users_table_name,
-        history_marker_name
-    )
-    print('--> Executing clv_document_import_sqlite()...')
+    history_marker_table_name = 'clv_history_marker'
+    print('-->', client, event_args, db_path, table_name,
+          global_tag_table_name, category_table_name, hr_employee_table_name, person_table_name,
+          history_marker_table_name)
+    print('--> Executing clv_event_import_sqlite_10()...')
     print()
-    clv_document_import_sqlite(
-        client, document_args, db_path, table_name, global_tag_table_name, category_table_name,
-        survey_survey_table_name, person_table_name, address_table_name, res_users_table_name,
-        history_marker_name
-    )
+    clv_event_import_sqlite_10(client, event_args, db_path, table_name,
+                               global_tag_table_name, category_table_name, hr_employee_table_name, person_table_name,
+                               history_marker_table_name)
 
-    document_log_args = []
-    table_name = 'clv_document_log'
-    document_table_name = 'clv_document'
-    res_users_table_name = 'res_users'
-    print('-->', client, document_log_args, db_path, table_name, document_table_name, res_users_table_name)
-    print('--> Executing clv_document_log_import_sqlite()...')
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'clv.event.code'
+    output_code = 'clv.event.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named_10()...')
     print()
-    clv_document_log_import_sqlite(client, document_log_args, db_path, table_name,
-                                   document_table_name, res_users_table_name)
+    ir_sequence_import_sqlite_named_10(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
 
 
 def get_arguments():
@@ -550,12 +632,26 @@ if __name__ == '__main__':
     # print('--> Executing jcafb_2017_export_sqlite()...')
     # jcafb_2017_export_sqlite(client, db_path, conn_string)
 
-    # # ***** tkl-odoo10-vm
+    # # ***** tkl-odoo10-jcafb-vm
     # #
     # db_path = 'data/clvhealth_jcafb_2017.sqlite'
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2017_import_sqlite()...')
     # jcafb_2017_import_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017_update.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_import_2017_update_sqlite()...')
+    # jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017_update.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_export_2017_update_sqlite()...')
+    # jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
