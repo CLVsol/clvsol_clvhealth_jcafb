@@ -443,12 +443,82 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
 
 def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
 
+    res_country_args = []
+    table_name = 'res_country'
+    print('-->', client, res_country_args, db_path, table_name)
+    print('--> Executing res_country_export_sqlite_10()...')
+    print()
+    res_country_export_sqlite_10(client, res_country_args, db_path, table_name)
+
+    res_country_state_args = []
+    table_name = 'res_country_state'
+    print('-->', client, res_country_state_args, db_path, table_name)
+    print('--> Executing res_country_state_export_sqlite_10()...')
+    print()
+    res_country_state_export_sqlite_10(client, res_country_state_args, db_path, table_name)
+
+    l10n_br_base_city_args = []
+    table_name = 'l10n_br_base_city'
+    print('-->', client, l10n_br_base_city_args, db_path, table_name)
+    print('--> Executing l10n_br_base_city_export_sqlite_10()...')
+    print()
+    l10n_br_base_city_export_sqlite_10(client, l10n_br_base_city_args, db_path, table_name)
+
+    res_partner_args = []
+    table_name = 'res_partner'
+    print('-->', client, res_partner_args, db_path, table_name)
+    print('--> Executing res_partner_export_sqlite_10()...')
+    print()
+    res_partner_export_sqlite_10(client, res_partner_args, db_path, table_name)
+
+    res_users_args = []
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name, conn_string)
+    print('--> Executing res_users_export_sqlite_10()...')
+    print()
+    res_users_export_sqlite_10(client, res_users_args, db_path, table_name, conn_string)
+
+    hr_department_args = []
+    table_name = 'hr_department'
+    print('-->', client, hr_department_args, db_path, table_name)
+    print('--> Executing hr_department_export_sqlite_10()...')
+    print()
+    hr_department_export_sqlite_10(client, hr_department_args, db_path, table_name)
+
+    hr_job_args = []
+    table_name = 'hr_job'
+    print('-->', client, hr_job_args, db_path, table_name)
+    print('--> Executing hr_job_export_sqlite_10()...')
+    print()
+    hr_job_export_sqlite_10(client, hr_job_args, db_path, table_name)
+
     hr_employee_args = []
     table_name = 'hr_employee'
     print('-->', client, hr_employee_args, db_path, table_name)
     print('--> Executing hr_employee_export_sqlite_10()...')
     print()
     hr_employee_export_sqlite_10(client, hr_employee_args, db_path, table_name)
+
+    hr_employee_history_args = []
+    table_name = 'hr_employee_history'
+    print('-->', client, hr_employee_history_args, db_path, table_name)
+    print('--> Executing hr_employee_history_export_sqlite_10()...')
+    print()
+    hr_employee_history_export_sqlite_10(client, hr_employee_history_args, db_path, table_name)
+
+    hr_job_history_args = []
+    table_name = 'hr_job_history'
+    print('-->', client, hr_job_history_args, db_path, table_name)
+    print('--> Executing hr_job_history_export_sqlite_10()...')
+    print()
+    hr_job_history_export_sqlite_10(client, hr_job_history_args, db_path, table_name)
+
+    hr_department_history_args = []
+    table_name = 'hr_department_history'
+    print('-->', client, hr_department_history_args, db_path, table_name)
+    print('--> Executing hr_department_history_export_sqlite_10()...')
+    print()
+    hr_department_history_export_sqlite_10(client, hr_department_history_args, db_path, table_name)
 
     tag_args = []
     table_name = 'clv_global_tag'
@@ -495,6 +565,49 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
 
 def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
 
+    employee_history_args = []
+    table_name = 'hr_employee_history'
+    hr_employee_table_name = 'hr_employee'
+    hr_department_table_name = 'hr_department'
+    hr_job_table_name = 'hr_job'
+    history_marker_table_name = 'clv_history_marker'
+    print('-->', client, employee_history_args, db_path, table_name,
+          hr_employee_table_name, hr_department_table_name, hr_job_table_name,
+          history_marker_table_name)
+    print('--> Executing hr_employee_history_import_sqlite_10()...')
+    print()
+    hr_employee_history_import_sqlite_10(client, employee_history_args, db_path, table_name,
+                                         hr_employee_table_name, hr_department_table_name, hr_job_table_name,
+                                         history_marker_table_name)
+
+    job_history_args = []
+    table_name = 'hr_job_history'
+    hr_employee_table_name = 'hr_employee'
+    hr_job_table_name = 'hr_job'
+    history_marker_table_name = 'clv_history_marker'
+    print('-->', client, job_history_args, db_path, table_name,
+          hr_employee_table_name, hr_job_table_name,
+          history_marker_table_name)
+    print('--> Executing hr_job_history_import_sqlite_10()...')
+    print()
+    hr_job_history_import_sqlite_10(client, job_history_args, db_path, table_name,
+                                    hr_employee_table_name, hr_job_table_name,
+                                    history_marker_table_name)
+
+    department_history_args = []
+    table_name = 'hr_department_history'
+    hr_employee_table_name = 'hr_employee'
+    hr_department_table_name = 'hr_department'
+    history_marker_table_name = 'clv_history_marker'
+    print('-->', client, department_history_args, db_path, table_name,
+          hr_employee_table_name, hr_department_table_name,
+          history_marker_table_name)
+    print('--> Executing hr_department_history_import_sqlite_10()...')
+    print()
+    hr_department_history_import_sqlite_10(client, department_history_args, db_path, table_name,
+                                           hr_employee_table_name, hr_department_table_name,
+                                           history_marker_table_name)
+
     event_args = []
     table_name = 'clv_event'
     global_tag_table_name = 'clv_global_tag'
@@ -521,6 +634,71 @@ def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
     ir_sequence_import_sqlite_named_10(
         client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
     )
+
+
+def jcafb_2018_user_groups_set(client, db_path, conn_string):
+
+    group_name_list_geral = [
+
+        # base:
+        #
+        'Employee',
+
+        # clv_base:
+        #
+        'User (Base)',
+        'Super User (Base)',
+        'Annotation User (Base)',
+        'Register User (Base)',
+        'Log User (Base)',
+        'Manager (Base)',
+        # 'Super Manager (Base)',
+
+        # clv_global_tag:
+        #
+        'User (Global Tag)',
+        'Manager (Global Tag)',
+        # 'Super Manager (Global Tag)',
+
+        # clv_history_marker:
+        #
+        'User (History Marker)',
+        'Manager (History Marker)',
+        # 'Super Manager (History Marker)',
+
+        # clv_address:
+        #
+        'User (Address)',
+        'Manager (Address)',
+        # 'Super Manager (Address)',
+
+        # clv_person:
+        #
+        'User (Person)',
+        'Manager (Person)',
+        # 'Super Manager (Person)',
+
+        # clv_community:
+        #
+        'User (Community)',
+        'Manager (Community)',
+        # 'Super Manager (Community)',
+
+        # clv_event:
+        #
+        'User (Event)',
+        'Manager (Event)',
+        # 'Super Manager (Event)',
+    ]
+
+    # Demo User
+    #
+    user_login = 'demo'
+    group_name_list = group_name_list_geral
+    print('-->', client, user_login, group_name_list)
+    print('--> Executing user_groups_set()...')
+    print()
+    user_groups_set(client, user_login, group_name_list)
 
 
 def get_arguments():
@@ -652,6 +830,13 @@ if __name__ == '__main__':
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_export_2017_update_sqlite()...')
     # jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2017_update.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_user_groups_set()...')
+    # jcafb_2018_user_groups_set(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
