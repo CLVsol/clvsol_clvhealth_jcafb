@@ -565,6 +565,37 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
 
 def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
 
+    history_marker_args = []
+    table_name = 'clv_history_marker'
+    print(
+        '-->',
+        client, history_marker_args, db_path, table_name
+    )
+    print('--> Executing clv_history_marker_import_sqlite_10()...')
+    print()
+    clv_history_marker_import_sqlite_10(
+        client, history_marker_args, db_path, table_name
+    )
+
+    hr_employee_args = []
+    table_name = 'hr_employee'
+    hr_department_table_name = 'hr_department'
+    hr_job_table_name = 'hr_job'
+    res_partner_table_name = 'res_partner'
+    res_users_table_name = 'res_users'
+    history_marker_table_name = 'clv_history_marker'
+    print(
+        '-->',
+        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+        res_partner_table_name, res_users_table_name, history_marker_table_name
+    )
+    print('--> Executing hr_employee_import_sqlite_10()...')
+    print()
+    hr_employee_import_sqlite_10(
+        client, hr_employee_args, db_path, table_name, hr_department_table_name, hr_job_table_name,
+        res_partner_table_name, res_users_table_name, history_marker_table_name
+    )
+
     employee_history_args = []
     table_name = 'hr_employee_history'
     hr_employee_table_name = 'hr_employee'
