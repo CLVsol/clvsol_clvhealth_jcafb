@@ -565,6 +565,14 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
 
 def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
 
+    res_users_args = []
+    table_name = 'res_users'
+    res_partner_table_name = 'res_partner'
+    print('-->', client, res_users_args, db_path, table_name, res_partner_table_name)
+    print('--> Executing res_users_import_sqlite_10()...')
+    print()
+    res_users_import_sqlite_10(client, res_users_args, db_path, table_name, res_partner_table_name)
+
     history_marker_args = []
     table_name = 'clv_history_marker'
     print(
