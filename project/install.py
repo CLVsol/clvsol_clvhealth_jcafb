@@ -446,8 +446,8 @@ def install():
     group_names = []
     install_update_module('sales_team', update, group_names)
 
-    # group_names = []
-    # install_update_module('survey', update, group_names)
+    group_names = []
+    install_update_module('survey', update, group_names)
 
     # ################################################################################################################
     #
@@ -556,6 +556,13 @@ def install():
     group_names = []
     install_update_module('clv_event_history', update, group_names)
 
+    group_names = [
+        'User (Survey)',
+        'Manager (Survey)',
+        'Super Manager (Survey)',
+    ]
+    install_update_module('clv_survey', update, group_names)
+
     # group_names = [
     #     'User (Document)',
     #     'Manager (Document)',
@@ -576,13 +583,6 @@ def install():
 
     # group_names = []
     # install_update_module('clv_mfile_history', update, group_names)
-
-    # group_names = [
-    #     'User (Survey)',
-    #     'Manager (Survey)',
-    #     'Super Manager (Survey)',
-    # ]
-    # install_update_module('clv_survey', update, group_names)
 
     # group_names = [
     #     'User (Lab Test)',
@@ -641,11 +641,11 @@ def install():
     group_names = []
     install_update_module('clv_event_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_survey_jcafb_2017', update, group_names)
 
     # group_names = []
-    # install_update_module('clv_survey_jcafb_2017', update, group_names)
+    # install_update_module('clv_document_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_mfile_jcafb', update, group_names)
