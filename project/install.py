@@ -563,16 +563,16 @@ def install():
     ]
     install_update_module('clv_survey', update, group_names)
 
-    # group_names = [
-    #     'User (Document)',
-    #     'Manager (Document)',
-    #     'Super Manager (Document)',
-    #     'Approver (Document)',
-    # ]
-    # install_update_module('clv_document', update, group_names)
+    group_names = [
+        'User (Document)',
+        'Manager (Document)',
+        'Super Manager (Document)',
+        'Approver (Document)',
+    ]
+    install_update_module('clv_document', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_history', update, group_names)
+    group_names = []
+    install_update_module('clv_document_history', update, group_names)
 
     # group_names = [
     #     'User (Media File)',
@@ -644,8 +644,8 @@ def install():
     group_names = []
     install_update_module('clv_survey_jcafb_2017', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_document_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_mfile_jcafb', update, group_names)
