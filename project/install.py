@@ -575,6 +575,14 @@ def install():
     install_update_module('clv_document_history', update, group_names)
 
     group_names = [
+        'User (Lab Test)',
+        'Manager (Lab Test)',
+        'Super Manager (Lab Test)',
+        'Approver (Lab Test)',
+    ]
+    install_update_module('clv_lab_test', update, group_names)
+
+    group_names = [
         'User (Media File)',
         'Manager (Media File)',
         'Super Manager (Media File)',
@@ -583,14 +591,6 @@ def install():
 
     group_names = []
     install_update_module('clv_mfile_history', update, group_names)
-
-    # group_names = [
-    #     'User (Lab Test)',
-    #     'Manager (Lab Test)',
-    #     'Super Manager (Lab Test)',
-    #     'Approver (Lab Test)',
-    # ]
-    # install_update_module('clv_lab_test', update, group_names)
 
     # group_names = [
     #     'User (Animal)',
@@ -648,10 +648,10 @@ def install():
     install_update_module('clv_document_jcafb', update, group_names)
 
     group_names = []
-    install_update_module('clv_mfile_jcafb', update, group_names)
+    install_update_module('clv_lab_test_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_lab_test_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_mfile_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_animal_jcafb', update, group_names)
