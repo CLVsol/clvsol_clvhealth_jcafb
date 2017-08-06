@@ -191,6 +191,41 @@ def jcafb_2017_export_sqlite(client, db_path, conn_string):
     print()
     myo_document_person_export_sqlite(client, document_person_args, db_path, table_name)
 
+    lab_test_unit_args = []
+    table_name = 'clv_lab_test_unit'
+    print('-->', client, lab_test_unit_args, db_path, table_name)
+    print('--> Executing myo_lab_test_unit_export_sqlite()...')
+    print()
+    myo_lab_test_unit_export_sqlite(client, lab_test_unit_args, db_path, table_name)
+
+    lab_test_criterion_args = []
+    table_name = 'clv_lab_test_criterion'
+    print('-->', client, lab_test_criterion_args, db_path, table_name)
+    print('--> Executing myo_lab_test_criterion_export_sqlite()...')
+    print()
+    myo_lab_test_criterion_export_sqlite(client, lab_test_criterion_args, db_path, table_name)
+
+    lab_test_type_args = []
+    table_name = 'clv_lab_test_type'
+    print('-->', client, lab_test_type_args, db_path, table_name)
+    print('--> Executing myo_lab_test_type_export_sqlite()...')
+    print()
+    myo_lab_test_type_export_sqlite(client, lab_test_type_args, db_path, table_name)
+
+    lab_test_request_args = []
+    table_name = 'clv_lab_test_request'
+    print('-->', client, lab_test_request_args, db_path, table_name)
+    print('--> Executing myo_lab_test_request_export_sqlite()...')
+    print()
+    myo_lab_test_request_export_sqlite(client, lab_test_request_args, db_path, table_name)
+
+    lab_test_result_args = []
+    table_name = 'clv_lab_test_result'
+    print('-->', client, lab_test_result_args, db_path, table_name)
+    print('--> Executing myo_lab_test_result_export_sqlite()...')
+    print()
+    myo_lab_test_result_export_sqlite(client, lab_test_result_args, db_path, table_name)
+
     ir_sequence_args = []
     table_name = 'ir_sequence'
     print('-->', client, ir_sequence_args, db_path, table_name, conn_string)
