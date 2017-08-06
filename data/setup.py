@@ -465,6 +465,17 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         history_marker_name
     )
 
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'myo.document.code'
+    output_code = 'clv.document.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named()...')
+    print()
+    ir_sequence_import_sqlite_named(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
+
     document_log_args = []
     table_name = 'clv_document_log'
     document_table_name = 'clv_document'
@@ -474,6 +485,35 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
     print()
     clv_document_log_import_sqlite(client, document_log_args, db_path, table_name,
                                    document_table_name, res_users_table_name)
+
+    lab_test_request_args = []
+    table_name = 'clv_lab_test_request'
+    lab_test_type_table_name = 'clv_lab_test_type'
+    person_table_name = 'clv_person'
+    res_users_table_name = 'res_users'
+    history_marker_name = 'JCAFB-2017'
+    print(
+        '-->',
+        client, lab_test_request_args, db_path, table_name, lab_test_type_table_name,
+        person_table_name, res_users_table_name, history_marker_name
+    )
+    print('--> Executing clv_lab_test_request_import_sqlite()...')
+    print()
+    clv_lab_test_request_import_sqlite(
+        client, lab_test_request_args, db_path, table_name, lab_test_type_table_name,
+        person_table_name, res_users_table_name, history_marker_name
+    )
+
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'myo.lab_test.request.code'
+    output_code = 'clv.lab_test.request.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named()...')
+    print()
+    ir_sequence_import_sqlite_named(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
 
 
 def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
