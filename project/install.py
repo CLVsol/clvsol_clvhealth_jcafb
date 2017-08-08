@@ -582,6 +582,9 @@ def install():
     ]
     install_update_module('clv_lab_test', update, group_names)
 
+    group_names = []
+    install_update_module('clv_lab_test_history', update, group_names)
+
     group_names = [
         'User (Media File)',
         'Manager (Media File)',
