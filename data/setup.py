@@ -515,6 +515,28 @@ def jcafb_2017_import_sqlite(client, db_path, conn_string):
         client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
     )
 
+    lab_test_result_args = []
+    table_name = 'clv_lab_test_result'
+    lab_test_type_table_name = 'clv_lab_test_type'
+    person_table_name = 'clv_person'
+    res_users_table_name = 'res_users'
+    history_marker_name = 'JCAFB-2017'
+    lab_test_criterion_table_name = 'clv_lab_test_criterion'
+    lab_test_unit_table_name = 'clv_lab_test_unit'
+    print(
+        '-->',
+        client, lab_test_result_args, db_path, table_name, lab_test_type_table_name,
+        person_table_name, res_users_table_name, history_marker_name,
+        lab_test_criterion_table_name, lab_test_unit_table_name
+    )
+    print('--> Executing clv_lab_test_result_import_sqlite()...')
+    print()
+    clv_lab_test_result_import_sqlite(
+        client, lab_test_result_args, db_path, table_name, lab_test_type_table_name,
+        person_table_name, res_users_table_name, history_marker_name,
+        lab_test_criterion_table_name, lab_test_unit_table_name
+    )
+
 
 def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
 
