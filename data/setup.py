@@ -638,6 +638,13 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
     print()
     clv_history_marker_export_sqlite_10(client, history_marker_args, db_path, table_name)
 
+    address_category_args = []
+    table_name = 'clv_address_category'
+    print('-->', client, address_category_args, db_path, table_name)
+    print('--> Executing clv_address_category_export_sqlite_10()...')
+    print()
+    clv_address_category_export_sqlite_10(client, address_category_args, db_path, table_name)
+
     address_args = []
     table_name = 'clv_address'
     print('-->', client, address_args, db_path, table_name)
@@ -797,6 +804,39 @@ def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
                                            hr_employee_table_name, hr_department_table_name,
                                            history_marker_table_name)
 
+    address_args = []
+    table_name = 'clv_address'
+    global_tag_table_name = 'clv_global_tag'
+    category_table_name = 'clv_address_category'
+    res_country_table_name = 'res_country'
+    res_country_state_table_name = 'res_country_state'
+    l10n_br_base_city_table_name = 'l10n_br_base_city'
+    hr_employee_table_name = 'hr_employee'
+    history_marker_table_name = 'clv_history_marker'
+    print(
+        '-->', client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        hr_employee_table_name, history_marker_table_name
+    )
+    print('--> Executing clv_address_import_sqlite_10()...')
+    print()
+    clv_address_import_sqlite_10(
+        client, address_args, db_path, table_name, global_tag_table_name, category_table_name,
+        res_country_table_name, res_country_state_table_name, l10n_br_base_city_table_name,
+        hr_employee_table_name, history_marker_table_name
+    )
+
+    ir_sequence_args = []
+    table_name = 'ir_sequence'
+    input_code = 'clv.address.code'
+    output_code = 'clv.address.code'
+    print('-->', client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code)
+    print('--> Executing ir_sequence_import_sqlite_named_10()...')
+    print()
+    ir_sequence_import_sqlite_named_10(
+        client, ir_sequence_args, db_path, table_name, conn_string, input_code, output_code
+    )
+
     person_args = []
     table_name = 'clv_person'
     global_tag_table_name = 'clv_global_tag'
@@ -872,6 +912,16 @@ def jcafb_2018_import_2017_update_sqlite(client, db_path, conn_string):
     print()
     clv_person_log_import_sqlite_10(client, person_log_args, db_path, table_name,
                                     person_table_name, res_users_table_name)
+
+    address_log_args = []
+    table_name = 'clv_address_log'
+    address_table_name = 'clv_address'
+    res_users_table_name = 'res_users'
+    print('-->', client, address_log_args, db_path, table_name, address_table_name, res_users_table_name)
+    print('--> Executing clv_address_log_import_sqlite_10()...')
+    print()
+    clv_address_log_import_sqlite_10(client, address_log_args, db_path, table_name,
+                                     address_table_name, res_users_table_name)
 
     event_log_args = []
     table_name = 'clv_event_log'
