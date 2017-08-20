@@ -610,6 +610,13 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
     print()
     hr_employee_history_export_sqlite_10(client, hr_employee_history_args, db_path, table_name)
 
+    hr_employee_history_log_args = []
+    table_name = 'hr_employee_history_log'
+    print('-->', client, hr_employee_history_log_args, db_path, table_name)
+    print('--> Executing hr_employee_history_log_export_sqlite_10()...')
+    print()
+    hr_employee_history_log_export_sqlite_10(client, hr_employee_history_log_args, db_path, table_name)
+
     hr_job_history_args = []
     table_name = 'hr_job_history'
     print('-->', client, hr_job_history_args, db_path, table_name)
@@ -666,6 +673,13 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
     print()
     clv_address_history_export_sqlite_10(client, address_history_args, db_path, table_name)
 
+    address_history_log_args = []
+    table_name = 'clv_address_history_log'
+    print('-->', client, address_history_log_args, db_path, table_name)
+    print('--> Executing clv_address_history_log_export_sqlite_10()...')
+    print()
+    clv_address_history_log_export_sqlite_10(client, address_history_log_args, db_path, table_name)
+
     person_category_args = []
     table_name = 'clv_person_category'
     print('-->', client, person_category_args, db_path, table_name)
@@ -686,6 +700,34 @@ def jcafb_2018_export_2017_update_sqlite(client, db_path, conn_string):
     print('--> Executing clv_person_log_export_sqlite_10()...')
     print()
     clv_person_log_export_sqlite_10(client, person_log_args, db_path, table_name)
+
+    person_history_args = []
+    table_name = 'clv_person_history'
+    print('-->', client, person_history_args, db_path, table_name)
+    print('--> Executing clv_person_history_export_sqlite_10()...')
+    print()
+    clv_person_history_export_sqlite_10(client, person_history_args, db_path, table_name)
+
+    person_history_log_args = []
+    table_name = 'clv_person_history_log'
+    print('-->', client, person_history_log_args, db_path, table_name)
+    print('--> Executing clv_person_history_log_export_sqlite_10()...')
+    print()
+    clv_person_history_log_export_sqlite_10(client, person_history_log_args, db_path, table_name)
+
+    person_address_history_args = []
+    table_name = 'clv_person_address_history'
+    print('-->', client, person_address_history_args, db_path, table_name)
+    print('--> Executing clv_person_address_history_export_sqlite_10()...')
+    print()
+    clv_person_address_history_export_sqlite_10(client, person_address_history_args, db_path, table_name)
+
+    person_address_history_log_args = []
+    table_name = 'clv_person_address_history_log'
+    print('-->', client, person_address_history_log_args, db_path, table_name)
+    print('--> Executing clv_person_address_history_log_export_sqlite_10()...')
+    print()
+    clv_person_address_history_log_export_sqlite_10(client, person_address_history_log_args, db_path, table_name)
 
     event_category_args = []
     table_name = 'clv_event_category'
