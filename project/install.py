@@ -446,8 +446,8 @@ def install():
     group_names = []
     install_update_module('sales_team', update, group_names)
 
-    # group_names = []
-    # install_update_module('survey', update, group_names)
+    group_names = []
+    install_update_module('survey', update, group_names)
 
     # ################################################################################################################
     #
@@ -556,44 +556,44 @@ def install():
     group_names = []
     install_update_module('clv_event_history', update, group_names)
 
-    # group_names = [
-    #     'User (Survey)',
-    #     'Manager (Survey)',
-    #     'Super Manager (Survey)',
-    # ]
-    # install_update_module('clv_survey', update, group_names)
+    group_names = [
+        'User (Survey)',
+        'Manager (Survey)',
+        'Super Manager (Survey)',
+    ]
+    install_update_module('clv_survey', update, group_names)
 
-    # group_names = [
-    #     'User (Document)',
-    #     'Manager (Document)',
-    #     'Super Manager (Document)',
-    #     'Approver (Document)',
-    # ]
-    # install_update_module('clv_document', update, group_names)
+    group_names = [
+        'User (Document)',
+        'Manager (Document)',
+        'Super Manager (Document)',
+        'Approver (Document)',
+    ]
+    install_update_module('clv_document', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_history', update, group_names)
+    group_names = []
+    install_update_module('clv_document_history', update, group_names)
 
-    # group_names = [
-    #     'User (Lab Test)',
-    #     'Manager (Lab Test)',
-    #     'Super Manager (Lab Test)',
-    #     'Approver (Lab Test)',
-    # ]
-    # install_update_module('clv_lab_test', update, group_names)
+    group_names = [
+        'User (Lab Test)',
+        'Manager (Lab Test)',
+        'Super Manager (Lab Test)',
+        'Approver (Lab Test)',
+    ]
+    install_update_module('clv_lab_test', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_lab_test_history', update, group_names)
+    group_names = []
+    install_update_module('clv_lab_test_history', update, group_names)
 
-    # group_names = [
-    #     'User (Media File)',
-    #     'Manager (Media File)',
-    #     'Super Manager (Media File)',
-    # ]
-    # install_update_module('clv_mfile', update, group_names)
+    group_names = [
+        'User (Media File)',
+        'Manager (Media File)',
+        'Super Manager (Media File)',
+    ]
+    install_update_module('clv_mfile', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_mfile_history', update, group_names)
+    group_names = []
+    install_update_module('clv_mfile_history', update, group_names)
 
     # # group_names = [
     # #     'User (Animal)',
@@ -644,20 +644,20 @@ def install():
     group_names = []
     install_update_module('clv_event_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_survey_jcafb_2017', update, group_names)
+    group_names = []
+    install_update_module('clv_survey_jcafb_2017', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_document_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_lab_test_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_lab_test_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_lab_test_jcafb_2017', update, group_names)
+    group_names = []
+    install_update_module('clv_lab_test_jcafb_2017', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_mfile_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_mfile_jcafb', update, group_names)
 
     # # group_names = []
     # # install_update_module('clv_animal_jcafb', update, group_names)
