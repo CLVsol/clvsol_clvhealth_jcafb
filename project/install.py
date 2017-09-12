@@ -662,6 +662,19 @@ def install():
     # # group_names = []
     # # install_update_module('clv_animal_jcafb', update, group_names)
 
+    # ################################################################################################################
+    #
+    # CLVsol Odoo Addons - JCAFB customizations
+    #
+    # ################################################################################################################
+
+    group_names = [
+        'User (Person Management)',
+        'Manager (Person Management)',
+        'Super Manager (Person Management)',
+    ]
+    install_update_module('clv_person_mng', update, group_names)
+
 
 def secondsToStr(t):
 
