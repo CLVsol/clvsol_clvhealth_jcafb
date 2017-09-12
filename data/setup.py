@@ -1172,6 +1172,105 @@ def jcafb_2018_user_groups_set(client, db_path, conn_string):
     user_groups_set(client, user_login, group_name_list)
 
 
+def jcafb_2018_export_2018_person_mng_sqlite(client, db_path, conn_string):
+
+    res_country_args = []
+    table_name = 'res_country'
+    print('-->', client, res_country_args, db_path, table_name)
+    print('--> Executing res_country_export_sqlite_10()...')
+    print()
+    res_country_export_sqlite_10(client, res_country_args, db_path, table_name)
+
+    res_country_state_args = []
+    table_name = 'res_country_state'
+    print('-->', client, res_country_state_args, db_path, table_name)
+    print('--> Executing res_country_state_export_sqlite_10()...')
+    print()
+    res_country_state_export_sqlite_10(client, res_country_state_args, db_path, table_name)
+
+    l10n_br_base_city_args = []
+    table_name = 'l10n_br_base_city'
+    print('-->', client, l10n_br_base_city_args, db_path, table_name)
+    print('--> Executing l10n_br_base_city_export_sqlite_10()...')
+    print()
+    l10n_br_base_city_export_sqlite_10(client, l10n_br_base_city_args, db_path, table_name)
+
+    res_users_args = []
+    table_name = 'res_users'
+    print('-->', client, res_users_args, db_path, table_name, conn_string)
+    print('--> Executing res_users_export_sqlite_10()...')
+    print()
+    res_users_export_sqlite_10(client, res_users_args, db_path, table_name, conn_string)
+
+    global_tag_args = []
+    table_name = 'clv_global_tag'
+    print('-->', client, global_tag_args, db_path, table_name)
+    print('--> Executing clv_global_tag_export_sqlite_10()...')
+    print()
+    clv_global_tag_export_sqlite_10(client, global_tag_args, db_path, table_name)
+
+    address_args = []
+    table_name = 'clv_address'
+    print('-->', client, address_args, db_path, table_name)
+    print('--> Executing clv_address_export_sqlite_10()...')
+    print()
+    clv_address_export_sqlite_10(client, address_args, db_path, table_name)
+
+    person_args = []
+    table_name = 'clv_person'
+    print('-->', client, person_args, db_path, table_name)
+    print('--> Executing clv_person_export_sqlite_10()...')
+    print()
+    clv_person_export_sqlite_10(client, person_args, db_path, table_name)
+
+    person_mng_args = []
+    table_name = 'clv_person_mng'
+    print('-->', client, person_mng_args, db_path, table_name)
+    print('--> Executing clv_person_mng_export_sqlite_10()...')
+    print()
+    clv_person_mng_export_sqlite_10(client, person_mng_args, db_path, table_name)
+
+    person_mng_log_args = []
+    table_name = 'clv_person_mng_log'
+    print('-->', client, person_mng_log_args, db_path, table_name)
+    print('--> Executing clv_person_mng_log_export_sqlite_10()...')
+    print()
+    clv_person_mng_log_export_sqlite_10(client, person_mng_log_args, db_path, table_name)
+
+
+def jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string):
+
+    person_mng_args = []
+    table_name = 'clv_person_mng'
+    global_tag_table_name = 'clv_global_tag'
+    person_table_name = 'clv_person'
+    address_table_name = 'clv_address'
+    res_country_state_table_name = 'res_country_state'
+    res_country_table_name = 'res_country'
+    l10n_br_base_city_table_name = 'l10n_br_base_city'
+    print(
+        '-->',
+        client, person_mng_args, db_path, table_name, global_tag_table_name, person_table_name, address_table_name,
+        res_country_state_table_name, res_country_table_name, l10n_br_base_city_table_name
+    )
+    print('--> Executing clv_person_mng_import_sqlite_10()...')
+    print()
+    clv_person_mng_import_sqlite_10(
+        client, person_mng_args, db_path, table_name, global_tag_table_name, person_table_name, address_table_name,
+        res_country_state_table_name, res_country_table_name, l10n_br_base_city_table_name
+    )
+
+    person_mng_log_args = []
+    table_name = 'clv_person_mng_log'
+    person_mng_table_name = 'clv_person_mng'
+    res_users_table_name = 'res_users'
+    print('-->', client, person_mng_log_args, db_path, table_name, person_mng_table_name, res_users_table_name)
+    print('--> Executing clv_person_mng_log_import_sqlite_10()...')
+    print()
+    clv_person_mng_log_import_sqlite_10(client, person_mng_log_args, db_path, table_name,
+                                        person_mng_table_name, res_users_table_name)
+
+
 def get_arguments():
 
     global server
@@ -1308,6 +1407,20 @@ if __name__ == '__main__':
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_user_groups_set()...')
     # jcafb_2018_user_groups_set(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_export_2018_person_mng_sqlite()...')
+    # jcafb_2018_export_2018_person_mng_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite()...')
+    # jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
