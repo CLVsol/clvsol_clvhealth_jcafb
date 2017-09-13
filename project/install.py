@@ -563,6 +563,9 @@ def install():
     ]
     install_update_module('clv_survey', update, group_names)
 
+    group_names = []
+    install_update_module('clv_survey_history', update, group_names)
+
     group_names = [
         'User (Document)',
         'Manager (Document)',
