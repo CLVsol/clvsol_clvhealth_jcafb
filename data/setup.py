@@ -1271,6 +1271,60 @@ def jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string):
                                         person_mng_table_name, res_users_table_name)
 
 
+def jcafb_2018_export_2018_history_marker_sqlite(client, db_path, conn_string):
+
+    history_marker_args = []
+    table_name = 'clv_history_marker'
+    print('-->', client, history_marker_args, db_path, table_name)
+    print('--> Executing clv_history_marker_export_sqlite_10()...')
+    print()
+    clv_history_marker_export_sqlite_10(client, history_marker_args, db_path, table_name)
+
+    survey_survey_args = []
+    table_name = 'survey_survey'
+    print('-->', client, survey_survey_args, db_path, table_name)
+    print('--> Executing survey_survey_export_sqlite_10()...')
+    print()
+    survey_survey_export_sqlite_10(client, survey_survey_args, db_path, table_name)
+
+    lab_test_type_args = []
+    table_name = 'clv_lab_test_type'
+    print('-->', client, lab_test_type_args, db_path, table_name)
+    print('--> Executing clv_lab_test_type_export_sqlite_10()...')
+    print()
+    clv_lab_test_type_export_sqlite_10(client, lab_test_type_args, db_path, table_name)
+
+
+def jcafb_2018_import_2018_history_marker_sqlite(client, db_path, conn_string):
+
+    survey_survey_args = []
+    table_name = 'survey_survey'
+    history_marker_table_name = 'clv_history_marker'
+    print(
+        '-->',
+        client, survey_survey_args, db_path, table_name, history_marker_table_name
+    )
+    print('--> Executing survey_survey_import_sqlite_10()...')
+    print()
+    survey_survey_import_sqlite_10(
+        client, survey_survey_args, db_path, table_name, history_marker_table_name
+    )
+
+    lab_test_type_args = []
+    table_name = 'clv_lab_test_type'
+    history_marker_table_name = 'clv_history_marker'
+    survey_survey_table_name = 'survey_survey'
+    print(
+        '-->',
+        client, lab_test_type_args, db_path, table_name, history_marker_table_name, survey_survey_table_name
+    )
+    print('--> Executing clv_lab_test_type_import_sqlite_10()...')
+    print()
+    clv_lab_test_type_import_sqlite_10(
+        client, lab_test_type_args, db_path, table_name, history_marker_table_name, survey_survey_table_name
+    )
+
+
 def get_arguments():
 
     global server
@@ -1421,6 +1475,20 @@ if __name__ == '__main__':
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite()...')
     # jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_history_marker.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_export_2018_history_marker_sqlite()...')
+    # jcafb_2018_export_2018_history_marker_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_history_marker.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_import_2018_history_marker_sqlite()...')
+    # jcafb_2018_import_2018_history_marker_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
