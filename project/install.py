@@ -537,6 +537,19 @@ def install():
     install_update_module('clv_person_address_history', update, group_names)
 
     group_names = [
+        'User (Animal)',
+        'Manager (Animal)',
+        'Super Manager (Animal)',
+    ]
+    install_update_module('clv_animal', update, group_names)
+
+    group_names = []
+    install_update_module('clv_animal_history', update, group_names)
+
+    group_names = []
+    install_update_module('clv_animal_address_history', update, group_names)
+
+    group_names = [
         'User (Community)',
         'Manager (Community)',
         'Super Manager (Community)',
@@ -598,16 +611,6 @@ def install():
     group_names = []
     install_update_module('clv_mfile_history', update, group_names)
 
-    # # group_names = [
-    # #     'User (Animal)',
-    # #     'Manager (Animal)',
-    # #     'Super Manager (Animal)',
-    # # ]
-    # # install_update_module('clv_animal', update, group_names)
-
-    # # group_names = []
-    # # install_update_module('clv_animal_address_history', update, group_names)
-
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
@@ -642,6 +645,9 @@ def install():
     install_update_module('clv_person_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_animal_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_community_jcafb', update, group_names)
 
     group_names = []
@@ -668,9 +674,6 @@ def install():
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
 
-    # # group_names = []
-    # # install_update_module('clv_animal_jcafb', update, group_names)
-
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - JCAFB customizations
@@ -683,6 +686,13 @@ def install():
         'Super Manager (Person Management)',
     ]
     install_update_module('clv_person_mng', update, group_names)
+
+    group_names = [
+        'User (Animal Management)',
+        'Manager (Animal Management)',
+        'Super Manager (Animal Management)',
+    ]
+    install_update_module('clv_animal_mng', update, group_names)
 
 
 def secondsToStr(t):
