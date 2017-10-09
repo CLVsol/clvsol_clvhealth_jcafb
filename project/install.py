@@ -493,6 +493,9 @@ def install():
     ]
     install_update_module('clv_base', update, group_names)
 
+    group_names = []
+    install_update_module('clv_off', update, group_names)
+
     group_names = [
         'User (Global Tag)',
         'Manager (Global Tag)',
@@ -535,6 +538,13 @@ def install():
 
     group_names = []
     install_update_module('clv_person_address_history', update, group_names)
+
+    group_names = [
+        'User (Person Off)',
+        'Manager (Person Off)',
+        'Super Manager (Person Off)',
+    ]
+    install_update_module('clv_person_off', update, group_names)
 
     group_names = [
         'User (Animal)',
@@ -626,6 +636,9 @@ def install():
     group_names = []
     install_update_module('clv_person_l10n_br', update, group_names)
 
+    group_names = []
+    install_update_module('clv_person_off_l10n_br', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - JCAFB customizations
@@ -643,6 +656,9 @@ def install():
 
     group_names = []
     install_update_module('clv_person_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_person_off_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_animal_jcafb', update, group_names)
