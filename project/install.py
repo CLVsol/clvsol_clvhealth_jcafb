@@ -493,7 +493,12 @@ def install():
     ]
     install_update_module('clv_base', update, group_names)
 
-    group_names = []
+    group_names = [
+        'User (Off)',
+        'Super User (Off)',
+        'Manager (Off)',
+        'Super Manager (Off)',
+    ]
     install_update_module('clv_off', update, group_names)
 
     group_names = [
