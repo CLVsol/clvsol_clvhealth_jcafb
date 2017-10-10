@@ -606,6 +606,13 @@ def install():
     install_update_module('clv_document_history', update, group_names)
 
     group_names = [
+        'User (Document (Off))',
+        'Manager (Document (Off))',
+        'Super Manager (Document (Off))',
+    ]
+    install_update_module('clv_document_off', update, group_names)
+
+    group_names = [
         'User (Lab Test)',
         'Manager (Lab Test)',
         'Super Manager (Lab Test)',
@@ -682,6 +689,9 @@ def install():
 
     group_names = []
     install_update_module('clv_document_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_document_off_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_lab_test_jcafb', update, group_names)
