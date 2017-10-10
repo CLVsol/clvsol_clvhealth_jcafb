@@ -624,6 +624,14 @@ def install():
     install_update_module('clv_lab_test_history', update, group_names)
 
     group_names = [
+        'User (Lab Test (Off))',
+        'Manager (Lab Test (Off))',
+        'Super Manager (Lab Test (Off))',
+        'Approver (Lab Test (Off))',
+    ]
+    install_update_module('clv_lab_test_off', update, group_names)
+
+    group_names = [
         'User (Media File)',
         'Manager (Media File)',
         'Super Manager (Media File)',
@@ -684,8 +692,8 @@ def install():
     group_names = []
     install_update_module('clv_survey_jcafb_2017', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_jcafb_2018', update, group_names)
 
     group_names = []
     install_update_module('clv_document_jcafb', update, group_names)
@@ -699,8 +707,8 @@ def install():
     group_names = []
     install_update_module('clv_lab_test_jcafb_2017', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_jcafb_2018', update, group_names)
 
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
