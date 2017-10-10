@@ -1464,20 +1464,6 @@ if __name__ == '__main__':
 
     # # ***** tkl-odoo10-jcafb-vm
     # #
-    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
-    # print('-->', client, db_path, conn_string)
-    # print('--> Executing jcafb_2018_export_2018_person_mng_sqlite()...')
-    # jcafb_2018_export_2018_person_mng_sqlite(client, db_path, conn_string)
-
-    # # ***** tkl-odoo10-jcafb-vm
-    # #
-    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
-    # print('-->', client, db_path, conn_string)
-    # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite()...')
-    # jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string)
-
-    # # ***** tkl-odoo10-jcafb-vm
-    # #
     # db_path = 'data/clvhealth_jcafb_2018_history_marker.sqlite'
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_export_2018_history_marker_sqlite()...')
@@ -1489,6 +1475,20 @@ if __name__ == '__main__':
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_import_2018_history_marker_sqlite()...')
     # jcafb_2018_import_2018_history_marker_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_export_2018_person_mng_sqlite()...')
+    # jcafb_2018_export_2018_person_mng_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite()...')
+    # jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
