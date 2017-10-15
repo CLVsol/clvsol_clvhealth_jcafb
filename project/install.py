@@ -733,11 +733,8 @@ def install():
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
 
-    # ################################################################################################################
-    #
-    # CLVsol Odoo Addons - JCAFB customizations
-    #
-    # ################################################################################################################
+    # group_names = []
+    # install_update_module('clv_default_jcafb_2018', update, group_names)
 
 
 def secondsToStr(t):
