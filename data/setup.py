@@ -1271,6 +1271,39 @@ def jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string):
                                         person_mng_table_name, res_users_table_name)
 
 
+def jcafb_2018_import_2018_person_mng_sqlite_renew(client, db_path, conn_string):
+
+    person_mng_args = []
+    table_name = 'clv_person_mng'
+    global_tag_table_name = 'clv_global_tag'
+    person_table_name = 'clv_person'
+    address_table_name = 'clv_address'
+    res_country_state_table_name = 'res_country_state'
+    res_country_table_name = 'res_country'
+    l10n_br_base_city_table_name = 'l10n_br_base_city'
+    print(
+        '-->',
+        client, person_mng_args, db_path, table_name, global_tag_table_name, person_table_name, address_table_name,
+        res_country_state_table_name, res_country_table_name, l10n_br_base_city_table_name
+    )
+    print('--> Executing clv_person_mng_import_sqlite_10_renew()...')
+    print()
+    clv_person_mng_import_sqlite_10_renew(
+        client, person_mng_args, db_path, table_name, global_tag_table_name, person_table_name, address_table_name,
+        res_country_state_table_name, res_country_table_name, l10n_br_base_city_table_name
+    )
+
+    person_mng_log_args = []
+    table_name = 'clv_person_mng_log'
+    person_mng_table_name = 'clv_person_mng'
+    res_users_table_name = 'res_users'
+    print('-->', client, person_mng_log_args, db_path, table_name, person_mng_table_name, res_users_table_name)
+    print('--> Executing clv_person_mng_log_import_sqlite_10()...')
+    print()
+    clv_person_mng_log_import_sqlite_10(client, person_mng_log_args, db_path, table_name,
+                                        person_mng_table_name, res_users_table_name)
+
+
 def jcafb_2018_export_2018_history_marker_sqlite(client, db_path, conn_string):
 
     history_marker_args = []
@@ -1489,6 +1522,13 @@ if __name__ == '__main__':
     # print('-->', client, db_path, conn_string)
     # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite()...')
     # jcafb_2018_import_2018_person_mng_sqlite(client, db_path, conn_string)
+
+    # # ***** tkl-odoo10-jcafb-vm
+    # #
+    # db_path = 'data/clvhealth_jcafb_2018_person_mng.sqlite'
+    # print('-->', client, db_path, conn_string)
+    # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite_renew()...')
+    # jcafb_2018_import_2018_person_mng_sqlite_renew(client, db_path, conn_string)
 
     print()
     print('--> setup.py', '- Execution time:', secondsToStr(time() - start))
