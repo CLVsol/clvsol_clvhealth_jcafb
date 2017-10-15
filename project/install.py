@@ -544,12 +544,12 @@ def install():
     group_names = []
     install_update_module('clv_person_address_history', update, group_names)
 
-    # group_names = [
-    #     'User (Person Management)',
-    #     'Manager (Person Management)',
-    #     'Super Manager (Person Management)',
-    # ]
-    # install_update_module('clv_person_mng', update, group_names)
+    group_names = [
+        'User (Person Management)',
+        'Manager (Person Management)',
+        'Super Manager (Person Management)',
+    ]
+    install_update_module('clv_person_mng', update, group_names)
 
     # group_names = [
     #     'User (Person Off)',
@@ -670,8 +670,8 @@ def install():
     group_names = []
     install_update_module('clv_person_l10n_br', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_mng_l10n_br', update, group_names)
+    group_names = []
+    install_update_module('clv_person_mng_l10n_br', update, group_names)
 
     # group_names = []
     # install_update_module('clv_person_off_l10n_br', update, group_names)
@@ -694,8 +694,8 @@ def install():
     group_names = []
     install_update_module('clv_person_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_mng_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_person_mng_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_person_off_jcafb', update, group_names)
@@ -733,8 +733,8 @@ def install():
     group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_default_jcafb_2018', update, group_names)
+    group_names = []
+    install_update_module('clv_default_jcafb_2018', update, group_names)
 
 
 def secondsToStr(t):
