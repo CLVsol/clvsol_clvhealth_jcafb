@@ -712,8 +712,8 @@ def install():
     group_names = []
     install_update_module('clv_survey_jcafb_2017', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_survey_jcafb_2018', update, group_names)
+    group_names = []
+    install_update_module('clv_survey_jcafb_2018', update, group_names)
 
     group_names = []
     install_update_module('clv_document_jcafb', update, group_names)
@@ -735,6 +735,13 @@ def install():
 
     group_names = []
     install_update_module('clv_default_jcafb_2018', update, group_names)
+
+    group_names = [
+        'User (Person Selection)',
+        'Manager (Person Selection)',
+        'Super Manager (Person Selection)',
+    ]
+    install_update_module('clv_person_sel', update, group_names)
 
 
 def secondsToStr(t):
