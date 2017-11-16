@@ -670,8 +670,8 @@ def install():
     group_names = []
     install_update_module('clv_person_l10n_br', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_history_l10n_br', update, group_names)
+    group_names = []
+    install_update_module('clv_person_history_l10n_br', update, group_names)
 
     group_names = []
     install_update_module('clv_person_mng_l10n_br', update, group_names)
@@ -700,8 +700,8 @@ def install():
     group_names = []
     install_update_module('clv_person_mng_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_history_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_person_history_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_person_off_jcafb', update, group_names)
