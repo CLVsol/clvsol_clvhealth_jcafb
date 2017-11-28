@@ -493,13 +493,13 @@ def install():
     ]
     install_update_module('clv_base', update, group_names)
 
-    # group_names = [
-    #     'User (Off)',
-    #     'Super User (Off)',
-    #     'Manager (Off)',
-    #     'Super Manager (Off)',
-    # ]
-    # install_update_module('clv_off', update, group_names)
+    group_names = [
+        'User (Off)',
+        'Super User (Off)',
+        'Manager (Off)',
+        'Super Manager (Off)',
+    ]
+    install_update_module('clv_off', update, group_names)
 
     group_names = [
         'User (Global Tag)',
@@ -558,12 +558,12 @@ def install():
     ]
     install_update_module('clv_person_mng', update, group_names)
 
-    # group_names = [
-    #     'User (Person Off)',
-    #     'Manager (Person Off)',
-    #     'Super Manager (Person Off)',
-    # ]
-    # install_update_module('clv_person_off', update, group_names)
+    group_names = [
+        'User (Person Off)',
+        'Manager (Person Off)',
+        'Super Manager (Person Off)',
+    ]
+    install_update_module('clv_person_off', update, group_names)
 
     # group_names = [
     #     'User (Animal)',
@@ -626,12 +626,12 @@ def install():
     group_names = []
     install_update_module('clv_document_history', update, group_names)
 
-    # group_names = [
-    #     'User (Document (Off))',
-    #     'Manager (Document (Off))',
-    #     'Super Manager (Document (Off))',
-    # ]
-    # install_update_module('clv_document_off', update, group_names)
+    group_names = [
+        'User (Document (Off))',
+        'Manager (Document (Off))',
+        'Super Manager (Document (Off))',
+    ]
+    install_update_module('clv_document_off', update, group_names)
 
     group_names = [
         'User (Lab Test)',
@@ -644,13 +644,13 @@ def install():
     group_names = []
     install_update_module('clv_lab_test_history', update, group_names)
 
-    # group_names = [
-    #     'User (Lab Test (Off))',
-    #     'Manager (Lab Test (Off))',
-    #     'Super Manager (Lab Test (Off))',
-    #     'Approver (Lab Test (Off))',
-    # ]
-    # install_update_module('clv_lab_test_off', update, group_names)
+    group_names = [
+        'User (Lab Test (Off))',
+        'Manager (Lab Test (Off))',
+        'Super Manager (Lab Test (Off))',
+        'Approver (Lab Test (Off))',
+    ]
+    install_update_module('clv_lab_test_off', update, group_names)
 
     group_names = [
         'User (Media File)',
@@ -683,8 +683,8 @@ def install():
     group_names = []
     install_update_module('clv_person_mng_l10n_br', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_off_l10n_br', update, group_names)
+    group_names = []
+    install_update_module('clv_person_off_l10n_br', update, group_names)
 
     # ################################################################################################################
     #
@@ -713,8 +713,8 @@ def install():
     group_names = []
     install_update_module('clv_person_history_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_person_off_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_person_off_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_animal_jcafb', update, group_names)
@@ -734,14 +734,14 @@ def install():
     group_names = []
     install_update_module('clv_document_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_document_off_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_document_off_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_lab_test_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_lab_test_off_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_lab_test_off_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_lab_test_jcafb_2017', update, group_names)
