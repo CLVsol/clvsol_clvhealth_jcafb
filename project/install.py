@@ -699,6 +699,9 @@ def install():
     install_update_module('clv_employee_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_employee_mng_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_address_jcafb', update, group_names)
 
     group_names = []
