@@ -522,6 +522,13 @@ def install():
     install_update_module('clv_employee_history', update, group_names)
 
     group_names = [
+        'User (Employee Management)',
+        'Manager (Employee Management)',
+        'Super Manager (Employee Management)',
+    ]
+    install_update_module('clv_employee_mng', update, group_names)
+
+    group_names = [
         'User (Address)',
         'Manager (Address)',
         'Super Manager (Address)',
