@@ -634,6 +634,13 @@ def install():
     install_update_module('clv_document_off', update, group_names)
 
     group_names = [
+        'User (Summary)',
+        'Manager (Summary)',
+        'Super Manager (Summary)',
+    ]
+    install_update_module('clv_summary', update, group_names)
+
+    group_names = [
         'User (Lab Test)',
         'Manager (Lab Test)',
         'Super Manager (Lab Test)',
