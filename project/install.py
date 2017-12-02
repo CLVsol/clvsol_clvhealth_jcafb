@@ -616,31 +616,6 @@ def install():
     install_update_module('clv_survey_history', update, group_names)
 
     group_names = [
-        'User (Document)',
-        'Manager (Document)',
-        'Super Manager (Document)',
-        'Approver (Document)',
-    ]
-    install_update_module('clv_document', update, group_names)
-
-    group_names = []
-    install_update_module('clv_document_history', update, group_names)
-
-    group_names = [
-        'User (Document (Off))',
-        'Manager (Document (Off))',
-        'Super Manager (Document (Off))',
-    ]
-    install_update_module('clv_document_off', update, group_names)
-
-    # group_names = [
-    #     'User (Summary)',
-    #     'Manager (Summary)',
-    #     'Super Manager (Summary)',
-    # ]
-    # install_update_module('clv_summary', update, group_names)
-
-    group_names = [
         'User (Lab Test)',
         'Manager (Lab Test)',
         'Super Manager (Lab Test)',
@@ -660,6 +635,24 @@ def install():
     install_update_module('clv_lab_test_off', update, group_names)
 
     group_names = [
+        'User (Document)',
+        'Manager (Document)',
+        'Super Manager (Document)',
+        'Approver (Document)',
+    ]
+    install_update_module('clv_document', update, group_names)
+
+    group_names = []
+    install_update_module('clv_document_history', update, group_names)
+
+    group_names = [
+        'User (Document (Off))',
+        'Manager (Document (Off))',
+        'Super Manager (Document (Off))',
+    ]
+    install_update_module('clv_document_off', update, group_names)
+
+    group_names = [
         'User (Media File)',
         'Manager (Media File)',
         'Super Manager (Media File)',
@@ -668,6 +661,13 @@ def install():
 
     group_names = []
     install_update_module('clv_mfile_history', update, group_names)
+
+    # group_names = [
+    #     'User (Summary)',
+    #     'Manager (Summary)',
+    #     'Super Manager (Summary)',
+    # ]
+    # install_update_module('clv_summary', update, group_names)
 
     # ################################################################################################################
     #
@@ -739,15 +739,6 @@ def install():
     install_update_module('clv_survey_jcafb_2018', update, group_names)
 
     group_names = []
-    install_update_module('clv_document_jcafb', update, group_names)
-
-    group_names = []
-    install_update_module('clv_document_off_jcafb', update, group_names)
-
-    # group_names = []
-    # install_update_module('clv_summary_jcafb', update, group_names)
-
-    group_names = []
     install_update_module('clv_lab_test_jcafb', update, group_names)
 
     group_names = []
@@ -760,7 +751,16 @@ def install():
     # install_update_module('clv_lab_test_jcafb_2018', update, group_names)
 
     group_names = []
+    install_update_module('clv_document_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_document_off_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_mfile_jcafb', update, group_names)
+
+    # group_names = []
+    # install_update_module('clv_summary_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_default_jcafb_2018', update, group_names)
