@@ -38,3 +38,4 @@ nosetests.xml
 data/data
 data/odoo_api
 survey_files
+summary_files
