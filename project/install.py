@@ -565,25 +565,25 @@ def install():
     ]
     install_update_module('clv_person_off', update, group_names)
 
-    # group_names = [
-    #     'User (Animal)',
-    #     'Manager (Animal)',
-    #     'Super Manager (Animal)',
-    # ]
-    # install_update_module('clv_animal', update, group_names)
+    group_names = [
+        'User (Animal)',
+        'Manager (Animal)',
+        'Super Manager (Animal)',
+    ]
+    install_update_module('clv_animal', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_animal_history', update, group_names)
+    group_names = []
+    install_update_module('clv_animal_history', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_animal_address_history', update, group_names)
+    group_names = []
+    install_update_module('clv_animal_address_history', update, group_names)
 
-    # group_names = [
-    #     'User (Animal Management)',
-    #     'Manager (Animal Management)',
-    #     'Super Manager (Animal Management)',
-    # ]
-    # install_update_module('clv_animal_mng', update, group_names)
+    group_names = [
+        'User (Animal Management)',
+        'Manager (Animal Management)',
+        'Super Manager (Animal Management)',
+    ]
+    install_update_module('clv_animal_mng', update, group_names)
 
     group_names = [
         'User (Community)',
@@ -723,8 +723,8 @@ def install():
     group_names = []
     install_update_module('clv_person_off_jcafb', update, group_names)
 
-    # group_names = []
-    # install_update_module('clv_animal_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_animal_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_community_jcafb', update, group_names)
