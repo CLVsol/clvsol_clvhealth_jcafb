@@ -502,6 +502,13 @@ def install():
     install_update_module('clv_off', update, group_names)
 
     group_names = [
+        'User (File System)',
+        'Manager (File System)',
+        'Super Manager (File System)',
+    ]
+    install_update_module('clv_file_system', update, group_names)
+
+    group_names = [
         'User (Global Tag)',
         'Manager (Global Tag)',
         'Super Manager (Global Tag)',
