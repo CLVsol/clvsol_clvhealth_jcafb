@@ -37,5 +37,6 @@ nosetests.xml
 
 data/data
 data/odoo_api
-survey_files
+lab_test_files
 summary_files
+survey_files
