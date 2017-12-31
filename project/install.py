@@ -676,6 +676,13 @@ def install():
     ]
     install_update_module('clv_summary', update, group_names)
 
+    group_names = [
+        'User (Report)',
+        'Manager (Report)',
+        'Super Manager (Report)',
+    ]
+    install_update_module('clv_report', update, group_names)
+
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
@@ -778,6 +785,9 @@ def install():
         'Super Manager (Person Selection)',
     ]
     install_update_module('clv_person_sel', update, group_names)
+
+    group_names = []
+    install_update_module('clv_report_jcafb', update, group_names)
 
 
 def secondsToStr(t):
