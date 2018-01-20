@@ -747,6 +747,9 @@ def install():
     install_update_module('clv_event_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_survey_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_survey_jcafb_2017', update, group_names)
 
     group_names = []
