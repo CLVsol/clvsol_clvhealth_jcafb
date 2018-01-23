@@ -522,6 +522,20 @@ def install():
     ]
     install_update_module('clv_history_marker', update, group_names)
 
+    group_names = [
+        'User (Report)',
+        'Manager (Report)',
+        'Super Manager (Report)',
+    ]
+    install_update_module('clv_report', update, group_names)
+
+    group_names = [
+        'User (Data Export)',
+        'Manager (Data Export)',
+        'Super Manager (Data Export)',
+    ]
+    install_update_module('clv_data_export', update, group_names)
+
     group_names = []
     install_update_module('clv_employee', update, group_names)
 
@@ -676,13 +690,6 @@ def install():
     ]
     install_update_module('clv_summary', update, group_names)
 
-    group_names = [
-        'User (Report)',
-        'Manager (Report)',
-        'Super Manager (Report)',
-    ]
-    install_update_module('clv_report', update, group_names)
-
     # ################################################################################################################
     #
     # CLVsol Odoo Addons - Brazilian Localization
@@ -715,6 +722,12 @@ def install():
 
     group_names = []
     install_update_module('clv_base_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_report_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_data_export_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_employee_jcafb', update, group_names)
@@ -788,9 +801,6 @@ def install():
         'Super Manager (Person Selection)',
     ]
     install_update_module('clv_person_sel', update, group_names)
-
-    group_names = []
-    install_update_module('clv_report_jcafb', update, group_names)
 
 
 def secondsToStr(t):
