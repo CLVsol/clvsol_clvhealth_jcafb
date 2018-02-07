@@ -600,13 +600,6 @@ def install():
     install_update_module('clv_animal_address_history', update, group_names)
 
     group_names = [
-        'User (Animal Management)',
-        'Manager (Animal Management)',
-        'Super Manager (Animal Management)',
-    ]
-    install_update_module('clv_animal_mng', update, group_names)
-
-    group_names = [
         'User (Community)',
         'Manager (Community)',
         'Super Manager (Community)',
@@ -724,6 +717,18 @@ def install():
     install_update_module('clv_base_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_off_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_file_system_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_global_tag_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_history_marker_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_report_jcafb', update, group_names)
 
     group_names = []
@@ -739,6 +744,9 @@ def install():
     install_update_module('clv_address_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_address_history_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_person_jcafb', update, group_names)
 
     group_names = []
@@ -752,6 +760,13 @@ def install():
 
     group_names = []
     install_update_module('clv_animal_jcafb', update, group_names)
+
+    group_names = [
+        'User (Animal Management)',
+        'Manager (Animal Management)',
+        'Super Manager (Animal Management)',
+    ]
+    install_update_module('clv_animal_mng', update, group_names)
 
     group_names = []
     install_update_module('clv_community_jcafb', update, group_names)
