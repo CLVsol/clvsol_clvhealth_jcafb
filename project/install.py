@@ -756,10 +756,19 @@ def install():
     install_update_module('clv_person_history_jcafb', update, group_names)
 
     group_names = []
+    install_update_module('clv_person_address_history_jcafb', update, group_names)
+
+    group_names = []
     install_update_module('clv_person_off_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_animal_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_animal_history_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_animal_address_history_jcafb', update, group_names)
 
     group_names = [
         'User (Animal Management)',
