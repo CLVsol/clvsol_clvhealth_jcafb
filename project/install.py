@@ -509,6 +509,13 @@ def install():
     install_update_module('clv_file_system', update, group_names)
 
     group_names = [
+        'User (Export)',
+        'Manager (Export)',
+        'Super Manager (Export)',
+    ]
+    install_update_module('clv_export', update, group_names)
+
+    group_names = [
         'User (Global Tag)',
         'Manager (Global Tag)',
         'Super Manager (Global Tag)',
@@ -721,6 +728,9 @@ def install():
 
     group_names = []
     install_update_module('clv_file_system_jcafb', update, group_names)
+
+    group_names = []
+    install_update_module('clv_export_jcafb', update, group_names)
 
     group_names = []
     install_update_module('clv_global_tag_jcafb', update, group_names)
