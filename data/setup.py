@@ -1530,7 +1530,7 @@ if __name__ == '__main__':
     # print('--> Executing jcafb_2018_import_2018_person_mng_sqlite_renew()...')
     # jcafb_2018_import_2018_person_mng_sqlite_renew(client, db_path, conn_string)
 
-    # # ##### tkl-odoo10-jcafb-vm (2018-09-19) ######################################
+    # # ##### tkl-odoo10-jcafb-vm (2018-09-21) ######################################
     # #
     # db_path = '/opt/openerp/filestore/jcafb/export/sqlite/clvhealth_jcafb_2019_tst.sqlite'
     # print('-->', client, db_path, conn_string)
