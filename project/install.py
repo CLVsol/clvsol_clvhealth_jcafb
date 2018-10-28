@@ -826,8 +826,8 @@ def install():
     group_names = []
     install_update_module('clv_summary_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_default_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_default_jcafb_2018', update, group_names)
 
     group_names = [
         'User (Person Selection)',
