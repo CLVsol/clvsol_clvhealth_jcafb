@@ -803,6 +803,9 @@ def install():
     install_update_module('clv_survey_jcafb_2018', update, group_names)
 
     group_names = []
+    install_update_module('clv_survey_jcafb_2019', update, group_names)
+
+    group_names = []
     install_update_module('clv_lab_test_jcafb', update, group_names)
 
     group_names = []
