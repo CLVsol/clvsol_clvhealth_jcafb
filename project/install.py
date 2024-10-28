@@ -29,11 +29,11 @@ class CLVhealthJCAFB(object):
         # demo_user_email='demo.user@clvsol.com',
         # Demo_User_image=images.Demo_User_image,
 
-        # data_admin_user_name='Data Administrator',
-        # data_admin_user='data.admin',
-        # data_admin_user_pw='data.admin',
-        # data_admin_user_email='data.admin@clvsol.com',
-        # DataAdministrator_image=images.DataAdministrator_image,
+        data_admin_user_name='Data Administrator',
+        data_admin_user='data.admin',
+        data_admin_user_pw='data.admin',
+        data_admin_user_email='data.admin@clvsol.com',
+        DataAdministrator_image=images.DataAdministrator_image,
 
         dbname='clvhealth_jcafb',
 
@@ -61,11 +61,11 @@ class CLVhealthJCAFB(object):
         # self.demo_user_email = demo_user_email
         # self.Demo_User_image = Demo_User_image
 
-        # self.data_admin_user_name = data_admin_user_name
-        # self.data_admin_user = data_admin_user
-        # self.data_admin_user_pw = data_admin_user_pw
-        # self.data_admin_user_email = data_admin_user_email
-        # self.DataAdministrator_image = DataAdministrator_image
+        self.data_admin_user_name = data_admin_user_name
+        self.data_admin_user = data_admin_user
+        self.data_admin_user_pw = data_admin_user_pw
+        self.data_admin_user_email = data_admin_user_email
+        self.DataAdministrator_image = DataAdministrator_image
 
         self.dbname = dbname
 
@@ -104,11 +104,11 @@ class CLVhealthJCAFB(object):
             #     self.demo_user_name, self.demo_user_email, self.CompanyName,
             #     self.demo_user, self.demo_user_pw, self.Demo_User_image
             # )
-            # print('\n--> data_administrator_user_setup()')
-            # db.data_administrator_user_setup(
-            #     self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
-            #     self.data_admin_user, self.data_admin_user_pw, self.DataAdministrator_image
-            # )
+            print('\n--> data_administrator_user_setup()')
+            db.data_administrator_user_setup(
+                self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
+                self.data_admin_user, self.data_admin_user_pw, self.DataAdministrator_image
+            )
 
         else:
 
