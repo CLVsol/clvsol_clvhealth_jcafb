@@ -122,11 +122,11 @@ class CLVhealthJCAFB(object):
             #     self.demo_user_name, self.demo_user_email, self.CompanyName,
             #     self.demo_user, self.demo_user_pw, self.Demo_User_image
             # )
-            # print('\n--> data_administrator_user_setup()')
-            # db.data_administrator_user_setup(
-            #     self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
-            #     self.data_admin_user, self.data_admin_user_pw, self.DataAdministrator_image
-            # )
+            print('\n--> data_administrator_user_setup()')
+            db.data_administrator_user_setup(
+                self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
+                self.data_admin_user, self.data_admin_user_pw, self.DataAdministrator_image
+            )
 
             print('\n--> newDB: ', newDB)
             client = erppeek.Client(
