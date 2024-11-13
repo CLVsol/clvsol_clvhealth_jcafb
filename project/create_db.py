@@ -23,12 +23,6 @@ class CLVhealthJCAFB(object):
         admin_user_email='admin@clvsol.com',
         Administrator_image=images.Administrator_image,
 
-        # demo_user_name='Demo User',
-        # demo_user='demo',
-        # demo_user_pw='demo',
-        # demo_user_email='demo.user@clvsol.com',
-        # Demo_User_image=images.Demo_User_image,
-
         data_admin_user_name='Data Administrator',
         data_admin_user='data.admin',
         data_admin_user_pw='data.admin',
@@ -54,12 +48,6 @@ class CLVhealthJCAFB(object):
         self.admin_user_pw = admin_user_pw
         self.admin_user_email = admin_user_email
         self.Administrator_image = Administrator_image
-
-        # self.demo_user_name = demo_user_name
-        # self.demo_user = demo_user
-        # self.demo_user_pw = demo_user_pw
-        # self.demo_user_email = demo_user_email
-        # self.Demo_User_image = Demo_User_image
 
         self.data_admin_user_name = data_admin_user_name
         self.data_admin_user = data_admin_user
@@ -99,11 +87,6 @@ class CLVhealthJCAFB(object):
             db.my_company_setup(self.CompanyName, self.website, self.Company_image)
             print('\n--> Administrator()')
             db.administrator_setup(self.admin_user_email, self.Administrator_image)
-            # print('\n--> demo_user_setup()')
-            # db.demo_user_setup(
-            #     self.demo_user_name, self.demo_user_email, self.CompanyName,
-            #     self.demo_user, self.demo_user_pw, self.Demo_User_image
-            # )
             print('\n--> data_administrator_user_setup()')
             db.data_administrator_user_setup(
                 self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
@@ -117,11 +100,6 @@ class CLVhealthJCAFB(object):
             db.my_company_setup(self.CompanyName, self.website, self.Company_image)
             print('\n--> Administrator()')
             db.administrator_setup(self.admin_user_email, self.Administrator_image)
-            # print('\n--> demo_user_setup()')
-            # db.demo_user_setup(
-            #     self.demo_user_name, self.demo_user_email, self.CompanyName,
-            #     self.demo_user, self.demo_user_pw, self.Demo_User_image
-            # )
             print('\n--> data_administrator_user_setup()')
             db.data_administrator_user_setup(
                 self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
@@ -702,7 +680,6 @@ if __name__ == '__main__':
         # super_user_pw=cli.super_user_pw,
         dbname=cli.dbname,
         admin_user_pw=cli.admin_user_pw,
-        # demo_user_pw='demo',
         # data_admin_user_pw=cli.data_admin_user_pw,
         demo_data=cli.demo_data,
         upgrade_all=cli.upgrade_all,
