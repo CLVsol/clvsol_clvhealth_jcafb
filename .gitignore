@@ -36,3 +36,4 @@ nosetests.xml
 .pydevproject
 
 project/odoo_client
+project/host.csv
