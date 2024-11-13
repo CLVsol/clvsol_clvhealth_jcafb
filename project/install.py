@@ -33,6 +33,7 @@ class CLVhealthJCAFB(object):
 
         lang='pt_BR',
         tz='America/Sao_Paulo',
+        country='Brazil',
 
         demo_data=False,
         upgrade_all=False,
@@ -59,6 +60,7 @@ class CLVhealthJCAFB(object):
 
         self.lang = lang
         self.tz = tz
+        self.country = country
 
         self.demo_data = demo_data
         self.upgrade_all = upgrade_all
@@ -686,6 +688,7 @@ if __name__ == '__main__':
         demo_data=False,
         lang='pt_BR',
         tz='America/Sao_Paulo',
+        country='Brazil',
     )
     cli.argparse_db_setup()
 
@@ -698,7 +701,8 @@ if __name__ == '__main__':
         upgrade_all=cli.upgrade_all,
         modules_to_upgrade=cli.modules_to_upgrade,
         lang=cli.lang,
-        tz=cli.tz
+        tz=cli.tz,
+        country=cli.country
     )
 
     db = DB(
@@ -709,7 +713,8 @@ if __name__ == '__main__':
         dbname=cli.dbname,
         demo_data=cli.demo_data,
         lang=cli.lang,
-        tz=cli.tz
+        tz=cli.tz,
+        country=cli.country
     )
 
     start = time()
